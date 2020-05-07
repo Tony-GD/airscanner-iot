@@ -7,10 +7,14 @@
 //
 
 import SwiftUI
+import Mapbox
 
 struct ContentView: View {
     @State private var selection = 0
- 
+    @State var annotations: [MGLPointAnnotation] = [
+        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
+    ]
+    
     var body: some View {
         TabView(selection: $selection){
             Text("First View")
@@ -20,24 +24,25 @@ struct ContentView: View {
                         Image("first")
                         Text("First")
                     }
+            }
+            .tag(0)
+            VStack{
+                MapView(annotations: $annotations).centerCoordinate(.init(latitude: 37.791293, longitude: -122.396324)).zoomLevel(16)
+            }
+            .tabItem {
+                VStack {
+                    Image("seconf")
+                    Text("Second")
                 }
-                .tag(0)
-            Text("Second View")
+            }
+            .tag(1)
+            Text("Third View")
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("second")
-                        Text("Second")
+                        Image("first")
+                        Text("Third")
                     }
-                }
-                .tag(1)
-            Text("Third View")
-            .font(.title)
-            .tabItem {
-                VStack {
-                    Image("first")
-                    Text("Third")
-                }
             }
             .tag(2)
         }
