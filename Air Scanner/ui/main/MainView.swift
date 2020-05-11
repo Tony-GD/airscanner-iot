@@ -7,32 +7,31 @@
 //
 
 import SwiftUI
-import Mapbox
 
-struct ContentView: View {
+
+struct MainView: View {
+    @EnvironmentObject var auth: AppAuth
     @State private var selection = 0
-    @State var annotations: [MGLPointAnnotation] = [
-        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
-    ]
-    
+   
     var body: some View {
+        NavigationView {
         TabView(selection: $selection){
-            Text("First View")
+            Text("\(auth.user.email ?? "default value")")
                 .font(.title)
                 .tabItem {
                     VStack {
                         Image("first")
-                        Text("First")
+                        Text("Home")
                     }
             }
             .tag(0)
             VStack{
-                MapView(annotations: $annotations).centerCoordinate(.init(latitude: 37.791293, longitude: -122.396324)).zoomLevel(16)
+                MapView()
             }
             .tabItem {
                 VStack {
-                    Image("seconf")
-                    Text("Second")
+                    Image("second")
+                    Text("Map")
                 }
             }
             .tag(1)
@@ -41,16 +40,17 @@ struct ContentView: View {
                 .tabItem {
                     VStack {
                         Image("first")
-                        Text("Third")
+                        Text("Notifications")
                     }
             }
             .tag(2)
         }
     }
+    }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }

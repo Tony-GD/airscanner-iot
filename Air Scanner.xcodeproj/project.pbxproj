@@ -7,37 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A475E8198460B4C3FF71206B /* libPods-Air Scanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F6370A44F7FFF07B14FCFE /* libPods-Air Scanner.a */; };
+		16598780DF6E530F15B5F927 /* Pods_Air_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FA5F2E607F0F0CD79C27CE /* Pods_Air_Scanner.framework */; };
+		CE31048224605A6C00A92C6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE31048124605A6C00A92C6A /* GoogleService-Info.plist */; };
+		CE3D5B222469EFF00018DA6D /* AppAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D5B212469EFF00018DA6D /* AppAuth.swift */; };
+		CE6670C92465AFA700C5E443 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6670C82465AFA700C5E443 /* MapViewController.swift */; };
 		CE72FDCD2459AA9300279EB0 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72FDCC2459AA9300279EB0 /* GreetingView.swift */; };
 		CE72FDCF2459AAE100279EB0 /* AddDeviceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72FDCE2459AAE100279EB0 /* AddDeviceRequest.swift */; };
-		CE72FDD32459B3B900279EB0 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72FDD22459B3B900279EB0 /* SignInView.swift */; };
 		CE72FDD8245A0E4800279EB0 /* NetworkGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72FDD7245A0E4800279EB0 /* NetworkGateway.swift */; };
+		CE7967B124623DD3005CB691 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7967B024623DD3005CB691 /* MapView.swift */; };
+		CE803BE124615C9800D5F869 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BE024615C9800D5F869 /* User.swift */; };
+		CE803BE324615D1F00D5F869 /* LocalStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BE224615D1F00D5F869 /* LocalStorageImpl.swift */; };
+		CE803BE52461617700D5F869 /* AbstractLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BE42461617700D5F869 /* AbstractLocalStorage.swift */; };
 		CE9966ED245A221A006DAD5D /* AddDeviceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9966EC245A221A006DAD5D /* AddDeviceResponse.swift */; };
+		CEEC64A62462EFC50065DDA6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC64A52462EFC50065DDA6 /* SplashView.swift */; };
 		CEF256CA245722AE00673749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF256C9245722AE00673749 /* AppDelegate.swift */; };
 		CEF256CC245722AE00673749 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF256CB245722AE00673749 /* SceneDelegate.swift */; };
-		CEF256CE245722AE00673749 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF256CD245722AE00673749 /* ContentView.swift */; };
+		CEF256CE245722AE00673749 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF256CD245722AE00673749 /* MainView.swift */; };
 		CEF256D0245722B100673749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF256CF245722B100673749 /* Assets.xcassets */; };
 		CEF256D3245722B100673749 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF256D2245722B100673749 /* Preview Assets.xcassets */; };
 		CEF256D6245722B100673749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF256D4245722B100673749 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CEE47FC92464BC5000721641 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		26F6370A44F7FFF07B14FCFE /* libPods-Air Scanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Air Scanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BD4F5122FE56BA676D863DC /* Pods-Air Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Air Scanner.debug.xcconfig"; path = "Target Support Files/Pods-Air Scanner/Pods-Air Scanner.debug.xcconfig"; sourceTree = "<group>"; };
+		93C41B503AE102CA865F8A29 /* Pods-Air Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Air Scanner.debug.xcconfig"; path = "Target Support Files/Pods-Air Scanner/Pods-Air Scanner.debug.xcconfig"; sourceTree = "<group>"; };
+		B4FA5F2E607F0F0CD79C27CE /* Pods_Air_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Air_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE31048124605A6C00A92C6A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE3D5B212469EFF00018DA6D /* AppAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAuth.swift; sourceTree = "<group>"; };
+		CE6670C82465AFA700C5E443 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CE72FDCC2459AA9300279EB0 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		CE72FDCE2459AAE100279EB0 /* AddDeviceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceRequest.swift; sourceTree = "<group>"; };
-		CE72FDD22459B3B900279EB0 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		CE72FDD7245A0E4800279EB0 /* NetworkGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGateway.swift; sourceTree = "<group>"; };
+		CE7967B024623DD3005CB691 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CE803BE024615C9800D5F869 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CE803BE224615D1F00D5F869 /* LocalStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageImpl.swift; sourceTree = "<group>"; };
+		CE803BE42461617700D5F869 /* AbstractLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractLocalStorage.swift; sourceTree = "<group>"; };
 		CE9966EC245A221A006DAD5D /* AddDeviceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceResponse.swift; sourceTree = "<group>"; };
+		CEE47FC42464989100721641 /* AirScanner.Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirScanner.Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		CEEC649D2462C7E10065DDA6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CEEC649E2462C7E10065DDA6 /* libswiftMapKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftMapKit.tbd; path = usr/lib/swift/libswiftMapKit.tbd; sourceTree = SDKROOT; };
+		CEEC64A52462EFC50065DDA6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		CEF256C6245722AE00673749 /* Air Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF256C9245722AE00673749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF256CB245722AE00673749 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEF256CD245722AE00673749 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEF256CD245722AE00673749 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CEF256CF245722B100673749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF256D2245722B100673749 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CEF256D5245722B100673749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF256D7245722B100673749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE53FB64407B12DDF69E6EB9 /* Pods-Air Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Air Scanner.release.xcconfig"; path = "Target Support Files/Pods-Air Scanner/Pods-Air Scanner.release.xcconfig"; sourceTree = "<group>"; };
+		FEA8BABED1E31475AFCC7A49 /* Pods-Air Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Air Scanner.release.xcconfig"; path = "Target Support Files/Pods-Air Scanner/Pods-Air Scanner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,18 +75,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A475E8198460B4C3FF71206B /* libPods-Air Scanner.a in Frameworks */,
+				16598780DF6E530F15B5F927 /* Pods_Air_Scanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06D6A322F742D0A410FD2007 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC649E2462C7E10065DDA6 /* libswiftMapKit.tbd */,
+				CEEC649D2462C7E10065DDA6 /* MapKit.framework */,
+				B4FA5F2E607F0F0CD79C27CE /* Pods_Air_Scanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE3D5B202469EFE20018DA6D /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				CE3D5B212469EFF00018DA6D /* AppAuth.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
 		CE72FDCA2459A48F00279EB0 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				CE72FDCE2459AAE100279EB0 /* AddDeviceRequest.swift */,
 				CE9966EC245A221A006DAD5D /* AddDeviceResponse.swift */,
+				CE803BE024615C9800D5F869 /* User.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -65,8 +114,54 @@
 			isa = PBXGroup;
 			children = (
 				CE72FDD7245A0E4800279EB0 /* NetworkGateway.swift */,
+				CE803BE224615D1F00D5F869 /* LocalStorageImpl.swift */,
+				CE803BE42461617700D5F869 /* AbstractLocalStorage.swift */,
 			);
 			path = gateway;
+			sourceTree = "<group>";
+		};
+		CE7967AF24623DC2005CB691 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				CE7967B024623DD3005CB691 /* MapView.swift */,
+				CE6670C82465AFA700C5E443 /* MapViewController.swift */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		CEEC64A72462F4790065DDA6 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC64AA2462F5190065DDA6 /* main */,
+				CEEC64A92462F50E0065DDA6 /* splash */,
+				CEEC64A82462F4FB0065DDA6 /* greeting */,
+				CE7967AF24623DC2005CB691 /* map */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		CEEC64A82462F4FB0065DDA6 /* greeting */ = {
+			isa = PBXGroup;
+			children = (
+				CE72FDCC2459AA9300279EB0 /* GreetingView.swift */,
+			);
+			path = greeting;
+			sourceTree = "<group>";
+		};
+		CEEC64A92462F50E0065DDA6 /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC64A52462EFC50065DDA6 /* SplashView.swift */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
+		CEEC64AA2462F5190065DDA6 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				CEF256CD245722AE00673749 /* MainView.swift */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 		CEF256BD245722AD00673749 = {
@@ -75,7 +170,7 @@
 				CEF256C8245722AE00673749 /* Air Scanner */,
 				CEF256C7245722AE00673749 /* Products */,
 				E7FD126B405E81443EA50DFC /* Pods */,
-				FD2FE74B17588C3C4F53028C /* Frameworks */,
+				06D6A322F742D0A410FD2007 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,17 +185,18 @@
 		CEF256C8245722AE00673749 /* Air Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				CE3D5B202469EFE20018DA6D /* auth */,
+				CEEC64A72462F4790065DDA6 /* ui */,
+				CE31048124605A6C00A92C6A /* GoogleService-Info.plist */,
 				CE72FDCB2459A4B300279EB0 /* gateway */,
 				CE72FDCA2459A48F00279EB0 /* model */,
 				CEF256C9245722AE00673749 /* AppDelegate.swift */,
 				CEF256CB245722AE00673749 /* SceneDelegate.swift */,
-				CEF256CD245722AE00673749 /* ContentView.swift */,
 				CEF256CF245722B100673749 /* Assets.xcassets */,
 				CEF256D4245722B100673749 /* LaunchScreen.storyboard */,
 				CEF256D7245722B100673749 /* Info.plist */,
 				CEF256D1245722B100673749 /* Preview Content */,
-				CE72FDCC2459AA9300279EB0 /* GreetingView.swift */,
-				CE72FDD22459B3B900279EB0 /* SignInView.swift */,
+				CEE47FC42464989100721641 /* AirScanner.Swift-Bridging-Header.h */,
 			);
 			path = "Air Scanner";
 			sourceTree = "<group>";
@@ -116,18 +212,10 @@
 		E7FD126B405E81443EA50DFC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2BD4F5122FE56BA676D863DC /* Pods-Air Scanner.debug.xcconfig */,
-				DE53FB64407B12DDF69E6EB9 /* Pods-Air Scanner.release.xcconfig */,
+				93C41B503AE102CA865F8A29 /* Pods-Air Scanner.debug.xcconfig */,
+				FEA8BABED1E31475AFCC7A49 /* Pods-Air Scanner.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		FD2FE74B17588C3C4F53028C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				26F6370A44F7FFF07B14FCFE /* libPods-Air Scanner.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,11 +225,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEF256DA245722B100673749 /* Build configuration list for PBXNativeTarget "Air Scanner" */;
 			buildPhases = (
-				BC4C54AE4C402ACD640978DA /* [CP] Check Pods Manifest.lock */,
+				CE4B795319C2D911E92A46CB /* [CP] Check Pods Manifest.lock */,
 				CEF256C2245722AD00673749 /* Sources */,
 				CEF256C3245722AD00673749 /* Frameworks */,
 				CEF256C4245722AD00673749 /* Resources */,
-				656B68ADAB0C08A8783A95AA /* [CP] Copy Pods Resources */,
+				CEE47FC92464BC5000721641 /* Embed PlugIns */,
+				BEE444F2BEBFD76F970D61AA /* [CP] Embed Pods Frameworks */,
+				2B5DDB1F63B15246F0970CDB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF256D6245722B100673749 /* LaunchScreen.storyboard in Resources */,
+				CE31048224605A6C00A92C6A /* GoogleService-Info.plist in Resources */,
 				CEF256D3245722B100673749 /* Preview Assets.xcassets in Resources */,
 				CEF256D0245722B100673749 /* Assets.xcassets in Resources */,
 			);
@@ -199,7 +290,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		656B68ADAB0C08A8783A95AA /* [CP] Copy Pods Resources */ = {
+		2B5DDB1F63B15246F0970CDB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,7 +307,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Air Scanner/Pods-Air Scanner-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC4C54AE4C402ACD640978DA /* [CP] Check Pods Manifest.lock */ = {
+		BEE444F2BEBFD76F970D61AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Air Scanner/Pods-Air Scanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Air Scanner/Pods-Air Scanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Air Scanner/Pods-Air Scanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE4B795319C2D911E92A46CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,13 +354,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE72FDD8245A0E4800279EB0 /* NetworkGateway.swift in Sources */,
-				CE72FDD32459B3B900279EB0 /* SignInView.swift in Sources */,
+				CE7967B124623DD3005CB691 /* MapView.swift in Sources */,
+				CE803BE324615D1F00D5F869 /* LocalStorageImpl.swift in Sources */,
 				CE9966ED245A221A006DAD5D /* AddDeviceResponse.swift in Sources */,
 				CE72FDCF2459AAE100279EB0 /* AddDeviceRequest.swift in Sources */,
+				CEEC64A62462EFC50065DDA6 /* SplashView.swift in Sources */,
+				CE6670C92465AFA700C5E443 /* MapViewController.swift in Sources */,
 				CEF256CA245722AE00673749 /* AppDelegate.swift in Sources */,
+				CE803BE124615C9800D5F869 /* User.swift in Sources */,
 				CEF256CC245722AE00673749 /* SceneDelegate.swift in Sources */,
+				CE803BE52461617700D5F869 /* AbstractLocalStorage.swift in Sources */,
+				CE3D5B222469EFF00018DA6D /* AppAuth.swift in Sources */,
 				CE72FDCD2459AA9300279EB0 /* GreetingView.swift in Sources */,
-				CEF256CE245722AE00673749 /* ContentView.swift in Sources */,
+				CEF256CE245722AE00673749 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,18 +500,26 @@
 		};
 		CEF256DB245722B100673749 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BD4F5122FE56BA676D863DC /* Pods-Air Scanner.debug.xcconfig */;
+			baseConfigurationReference = 93C41B503AE102CA865F8A29 /* Pods-Air Scanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Air Scanner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Air Scanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.griddynamics.Air-Scanner";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.griddynamics.connectedapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,18 +528,26 @@
 		};
 		CEF256DC245722B100673749 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE53FB64407B12DDF69E6EB9 /* Pods-Air Scanner.release.xcconfig */;
+			baseConfigurationReference = FEA8BABED1E31475AFCC7A49 /* Pods-Air Scanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Air Scanner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Air Scanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.griddynamics.Air-Scanner";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.griddynamics.connectedapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

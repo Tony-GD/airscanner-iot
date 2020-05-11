@@ -10,6 +10,7 @@ import SwiftUI
 import GoogleSignIn
 
 struct GreetingView: View {
+    @EnvironmentObject var auth: AppAuth
     
     var body: some View {
         NavigationView {
@@ -26,15 +27,15 @@ struct GreetingView: View {
             Spacer()
             Text("or")
             
-            NavigationLink(destination: ContentView()) {Text("Continue as guest")}
+            NavigationLink(destination: MainView()) {Text("Continue as guest")}
             
             Spacer()
         }
         }
     }
     
-    func onSignInSuccess() {
-        
+    func onSignInSuccess(user: User) {
+        auth.$user.append(user)
     }
     
     func onSignInFail() {

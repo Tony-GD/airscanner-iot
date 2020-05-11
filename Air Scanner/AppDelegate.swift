@@ -8,11 +8,14 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
+import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-    
-    
+    var auth: AppAuth?
+    let localStorage: LocalStorage = LocalStorageImpl()
+    var window: UIWindow?
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
@@ -23,14 +26,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
           }
           return
         }
-        print("signed \(user.profile.name)")
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                          accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+          if let error = error {
+            let authError = error as NSError
+            if (authError.code == AuthErrorCode.secondFactorRequired.rawValue) {
+              // The user is a multi-factor user. Second factor challenge is required.
+              let resolver = authError.userInfo[AuthErrorUserInfoMultiFactorResolverKey] as! MultiFactorResolver
+              var displayNameString = ""
+              for tmpFactorInfo in (resolver.hints) {
+                displayNameString += tmpFactorInfo.displayName ?? ""
+              }
+              print("auth error: \(displayNameString)")
+            } else {
+              print("auth error: \(error.localizedDescription)")
+              return
+            }
+            // ...
+            return
+          }
+          // User is signed in
+          // ...
+        }
         // Perform any operations on signed in user here.
-        let userId = user.userID                  // For client-side use only!
-        let idToken = user.authentication.idToken // Safe to send to the server
-        let fullName = user.profile.name
-        let givenName = user.profile.givenName
-        let familyName = user.profile.familyName
-        let email = user.profile.email
+        let user = User(id: user.userID, idToken: user.authentication.idToken, givenName: user.profile.givenName, familyName: user.profile.familyName, email: user.profile.email)
+        auth?.user = user
+        localStorage.saveUser(user:user)
     }
     
 
@@ -42,8 +65,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GIDSignIn.sharedInstance()?.clientID = "902173168925-j45a0ovt3qoni3n0f505q9lh0jcbg2gg.apps.googleusercontent.com"
+        FirebaseApp.configure()
+        GIDSignIn.sharedInstance()?.clientID = "713133371133-00gk4cvl3udiappkm950lu0ubustdelp.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
+        
+        
         return true
     }
 

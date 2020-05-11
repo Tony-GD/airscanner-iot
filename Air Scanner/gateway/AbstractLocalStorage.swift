@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol LocalStorage {
+    func saveUser(user: User)
+    func getUser() -> User
+}

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F243B36381C0CE83CCFF789AC38F0D36"
-               BuildableName = "libRxBlocking.a"
+               BuildableName = "RxBlocking.framework"
                BlueprintName = "RxBlocking"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

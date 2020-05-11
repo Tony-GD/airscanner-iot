@@ -1,2 +1,391 @@
 ${PODS_ROOT}/Target Support Files/Pods-Air Scanner/Pods-Air Scanner-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle
 ${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/geography-class_medres.mbtiles
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_0x0.pvrtc
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_0x1.pvrtc
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_1x0.pvrtc
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_1x1.pvrtc
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_2x0.pvrtc
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_2x1.pvrtc
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_3x0.pvrtc
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_3x1.pvrtc
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_4x0.pvrtc
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_4x1.pvrtc
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb/lowres_wtb_info.plist
+${PODS_ROOT}/WhirlyGlobeResources/elevation/world_web_mercator.sqlite
+${PODS_ROOT}/WhirlyGlobeResources/LICENSE
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/airfield-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/airport-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/alcohol-shop-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/america-football-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/art-gallery-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/bakery-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/bank-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/bar-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/baseball-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/basketball-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/beer-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/bicycle-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/building-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/bus-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/cafe-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/camera-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/campsite-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/car-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/cemetery-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/cinema-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/circle-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/circle-stroked-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/city-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/clothing-store-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/college-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/commercial-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/cricket-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/cross-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/dam-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/danger-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/disability-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/dog-park-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/embassy-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/emergency-telephone-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/farm-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/fast-food-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/ferry-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/fire-station-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/fuel-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/garden-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/golf-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/grocery-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/harbor-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/heliport-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/hospital-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/industrial-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/land-use-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/laundry-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/library-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/lighthouse-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/lodging-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/logging-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/london-underground-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/marker-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/marker-stroked-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/minefield-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/monument-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/museum-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/music-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/oil-well-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/park-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/park2-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/parking-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/parking-garage-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/pharmacy-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/pitch-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/place-of-worship-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/playground-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/police-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/polling-place-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/post-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/prison-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/rail-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/rail-above-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/rail-underground-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/religious-christian-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/religious-jewish-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/religious-muslim-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/restaurant-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/roadblock-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/rocket-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/school-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/shop-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/skiing-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/slaughterhouse-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/soccer-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/square-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/square-stroked-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/star-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/star-stroked-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/suitcase-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/swimming-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/telephone-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/tennis-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/theatre-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/toilets-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/town-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/town-hall-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/triangle-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/triangle-stroked-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/village-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/warehouse-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/waste-basket-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/water-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/wetland-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/maki icons/zoo-24@2x.png
+${PODS_ROOT}/WhirlyGlobeResources/mapbox vectors/osm-bright.xml
+${PODS_ROOT}/WhirlyGlobeResources/mapzen vectors/MapzenStyles.json
+${PODS_ROOT}/WhirlyGlobeResources/README.md
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ABW.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/AFG.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/AGO.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/AIA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ALA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ALB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/AND.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ARE.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ARG.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ARM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ASM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ATA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ATF.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ATG.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/AUS.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/AUT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/AZE.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BDI.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BEL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BEN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BES.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BFA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BGD.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BGR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BHR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BHS.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BIH.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BLM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BLR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BLZ.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BMU.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BOL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BRA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BRB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BRN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BTN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BVT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/BWA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CAF.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CAN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CCK.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CHE.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CHL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CHN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CIV.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CMR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/COD.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/COG.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/COK.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/COL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/COM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CPV.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CRI.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CUB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CUW.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CXR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CYM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CYP.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/CZE.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/DEU.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/DJI.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/DMA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/DNK.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/DOM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/DZA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ECU.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/EGY.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ERI.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ESH.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ESP.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/EST.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ETH.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/FIN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/FJI.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/FLK.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/FRA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/FRO.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/FSM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GAB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GBR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GEO.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GGY.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GHA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GIB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GIN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GLP.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GMB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GNB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GNQ.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GRC.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GRD.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GRL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GTM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GUF.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GUM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/GUY.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/HKG.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/HMD.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/HND.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/HRV.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/HTI.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/HUN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/IDN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/IMN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/IND.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/IOT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/IRL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/IRN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/IRQ.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ISL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ISR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ITA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/JAM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/JEY.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/JOR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/JPN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/KAZ.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/KEN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/KGZ.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/KHM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/KIR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/KNA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/KOR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/KWT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LAO.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LBN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LBR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LBY.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LCA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LIE.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LKA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LSO.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LTU.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LUX.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/LVA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MAC.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MAF.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MAR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MCO.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MDA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MDG.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MDV.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MEX.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MHL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MKD.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MLI.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MLT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MMR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MNE.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MNG.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MNP.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MOZ.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MRT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MSR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MTQ.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MUS.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MWI.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MYS.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/MYT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NAM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NCL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NER.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NFK.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NGA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NIC.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NIU.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NLD.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NOR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NPL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NRU.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/NZL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/OMN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PAK.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PAN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PCN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PER.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PHL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PLW.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PNG.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/POL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PRI.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PRK.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PRT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PRY.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PSE.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/PYF.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/QAT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/REU.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ROU.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/RUS.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/RWA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SAU.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SDN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SEN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SGP.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SGS.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SHN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SJM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SLB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SLE.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SLV.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SMR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SOM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SPM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SRB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SSD.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/STP.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SUR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SVK.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SVN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SWE.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SWZ.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SXM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SYC.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/SYR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TCA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TCD.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TGO.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/THA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TJK.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TKL.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TKM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TLS.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TON.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TTO.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TUN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TUR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TUV.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TWN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/TZA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/UGA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/UKR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/UMI.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/URY.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/USA.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/UZB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/VAT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/VCT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/VEN.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/VGB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/VIR.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/VNM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/VUT.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/WLF.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/WSM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/YEM.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ZAF.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ZMB.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m/ZWE.geojson
+${PODS_ROOT}/WhirlyGlobeResources/vectors/sf_roads/tl_2013_06075_roads.dbf
+${PODS_ROOT}/WhirlyGlobeResources/vectors/sf_roads/tl_2013_06075_roads.mbr
+${PODS_ROOT}/WhirlyGlobeResources/vectors/sf_roads/tl_2013_06075_roads.prj
+${PODS_ROOT}/WhirlyGlobeResources/vectors/sf_roads/tl_2013_06075_roads.shp
+${PODS_ROOT}/WhirlyGlobeResources/vectors/sf_roads/tl_2013_06075_roads.shx
+${PODS_ROOT}/WhirlyGlobeResources/vectors/sf_roads/tl_2013_06075_roads.sqlite
+${PODS_ROOT}/WhirlyGlobeResources/base_maps
+${PODS_ROOT}/WhirlyGlobeResources/base_maps/lowres_wtb
+${PODS_ROOT}/WhirlyGlobeResources/elevation
+${PODS_ROOT}/WhirlyGlobeResources/maki icons
+${PODS_ROOT}/WhirlyGlobeResources/mapbox vectors
+${PODS_ROOT}/WhirlyGlobeResources/mapzen vectors
+${PODS_ROOT}/WhirlyGlobeResources/vectors
+${PODS_ROOT}/WhirlyGlobeResources/vectors/country_json_50m
+${PODS_ROOT}/WhirlyGlobeResources/vectors/sf_roads

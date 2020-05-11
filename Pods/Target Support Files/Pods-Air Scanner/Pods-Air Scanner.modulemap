@@ -1,4 +1,4 @@
-module Pods_Air_Scanner {
+framework module Pods_Air_Scanner {
   umbrella header "Pods-Air Scanner-umbrella.h"
 
   export *

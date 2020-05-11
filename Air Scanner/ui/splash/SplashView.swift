@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-
-
 struct SplashView: View {
-    @State var isActive: Bool
+    @EnvironmentObject var auth: AppAuth
     var body: some View {
-        NavigationView {
-            NavigationLink(destination: ContentView(), isActive: $isActive) {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            if auth.user == EmptyUser {
+                GreetingView()
+            } else {
+                MainView()
             }
         }
     }
