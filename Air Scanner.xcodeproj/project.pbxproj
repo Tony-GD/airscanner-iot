@@ -19,6 +19,10 @@
 		CE803BE324615D1F00D5F869 /* LocalStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BE224615D1F00D5F869 /* LocalStorageImpl.swift */; };
 		CE803BE52461617700D5F869 /* AbstractLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BE42461617700D5F869 /* AbstractLocalStorage.swift */; };
 		CE9966ED245A221A006DAD5D /* AddDeviceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9966EC245A221A006DAD5D /* AddDeviceResponse.swift */; };
+		CE9E2F88247428D2006A11A1 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9E2F87247428D2006A11A1 /* NotificationCenter.framework */; };
+		CE9E2F8B247428D2006A11A1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E2F8A247428D2006A11A1 /* TodayViewController.swift */; };
+		CE9E2F8E247428D2006A11A1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9E2F8C247428D2006A11A1 /* MainInterface.storyboard */; };
+		CE9E2F92247428D2006A11A1 /* Air Scanner Widget.appex in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = CE9E2F86247428D2006A11A1 /* Air Scanner Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CEEC64A62462EFC50065DDA6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC64A52462EFC50065DDA6 /* SplashView.swift */; };
 		CEF256CA245722AE00673749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF256C9245722AE00673749 /* AppDelegate.swift */; };
 		CEF256CC245722AE00673749 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF256CB245722AE00673749 /* SceneDelegate.swift */; };
@@ -28,6 +32,16 @@
 		CEF256D6245722B100673749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF256D4245722B100673749 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CE9E2F90247428D2006A11A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEF256BE245722AD00673749 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE9E2F85247428D2006A11A1;
+			remoteInfo = "Air Scanner Widget";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		CEE47FC92464BC5000721641 /* Embed PlugIns */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -35,6 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				CE9E2F92247428D2006A11A1 /* Air Scanner Widget.appex in Embed PlugIns */,
 			);
 			name = "Embed PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +70,11 @@
 		CE803BE224615D1F00D5F869 /* LocalStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageImpl.swift; sourceTree = "<group>"; };
 		CE803BE42461617700D5F869 /* AbstractLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractLocalStorage.swift; sourceTree = "<group>"; };
 		CE9966EC245A221A006DAD5D /* AddDeviceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceResponse.swift; sourceTree = "<group>"; };
+		CE9E2F86247428D2006A11A1 /* Air Scanner Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Air Scanner Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9E2F87247428D2006A11A1 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		CE9E2F8A247428D2006A11A1 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		CE9E2F8D247428D2006A11A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CE9E2F8F247428D2006A11A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEE47FC42464989100721641 /* AirScanner.Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirScanner.Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CEEC649D2462C7E10065DDA6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CEEC649E2462C7E10065DDA6 /* libswiftMapKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftMapKit.tbd; path = usr/lib/swift/libswiftMapKit.tbd; sourceTree = SDKROOT; };
@@ -71,6 +91,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE9E2F83247428D2006A11A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9E2F88247428D2006A11A1 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEF256C3245722AD00673749 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,6 +116,7 @@
 				CEEC649E2462C7E10065DDA6 /* libswiftMapKit.tbd */,
 				CEEC649D2462C7E10065DDA6 /* MapKit.framework */,
 				B4FA5F2E607F0F0CD79C27CE /* Pods_Air_Scanner.framework */,
+				CE9E2F87247428D2006A11A1 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,6 +158,16 @@
 			path = map;
 			sourceTree = "<group>";
 		};
+		CE9E2F89247428D2006A11A1 /* Air Scanner Widget */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E2F8A247428D2006A11A1 /* TodayViewController.swift */,
+				CE9E2F8C247428D2006A11A1 /* MainInterface.storyboard */,
+				CE9E2F8F247428D2006A11A1 /* Info.plist */,
+			);
+			path = "Air Scanner Widget";
+			sourceTree = "<group>";
+		};
 		CEEC64A72462F4790065DDA6 /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF256C8245722AE00673749 /* Air Scanner */,
+				CE9E2F89247428D2006A11A1 /* Air Scanner Widget */,
 				CEF256C7245722AE00673749 /* Products */,
 				E7FD126B405E81443EA50DFC /* Pods */,
 				06D6A322F742D0A410FD2007 /* Frameworks */,
@@ -178,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF256C6245722AE00673749 /* Air Scanner.app */,
+				CE9E2F86247428D2006A11A1 /* Air Scanner Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +262,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE9E2F85247428D2006A11A1 /* Air Scanner Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9E2F95247428D2006A11A1 /* Build configuration list for PBXNativeTarget "Air Scanner Widget" */;
+			buildPhases = (
+				CE9E2F82247428D2006A11A1 /* Sources */,
+				CE9E2F83247428D2006A11A1 /* Frameworks */,
+				CE9E2F84247428D2006A11A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Air Scanner Widget";
+			productName = "Air Scanner Widget";
+			productReference = CE9E2F86247428D2006A11A1 /* Air Scanner Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CEF256C5245722AD00673749 /* Air Scanner */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEF256DA245722B100673749 /* Build configuration list for PBXNativeTarget "Air Scanner" */;
@@ -236,6 +294,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CE9E2F91247428D2006A11A1 /* PBXTargetDependency */,
 			);
 			name = "Air Scanner";
 			productName = "Air Scanner";
@@ -252,6 +311,9 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Grid dynamics";
 				TargetAttributes = {
+					CE9E2F85247428D2006A11A1 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
 					CEF256C5245722AD00673749 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -271,11 +333,20 @@
 			projectRoot = "";
 			targets = (
 				CEF256C5245722AD00673749 /* Air Scanner */,
+				CE9E2F85247428D2006A11A1 /* Air Scanner Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE9E2F84247428D2006A11A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9E2F8E247428D2006A11A1 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEF256C4245722AD00673749 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,6 +420,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE9E2F82247428D2006A11A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9E2F8B247428D2006A11A1 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEF256C2245722AD00673749 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,7 +451,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CE9E2F91247428D2006A11A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE9E2F85247428D2006A11A1 /* Air Scanner Widget */;
+			targetProxy = CE9E2F90247428D2006A11A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		CE9E2F8C247428D2006A11A1 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE9E2F8D247428D2006A11A1 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		CEF256D4245722B100673749 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -384,6 +479,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CE9E2F93247428D2006A11A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Air Scanner Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.griddynamics.connectedapps.Air-Scanner-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE9E2F94247428D2006A11A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Air Scanner Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.griddynamics.connectedapps.Air-Scanner-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CEF256D8245722B100673749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -502,6 +633,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93C41B503AE102CA865F8A29 /* Pods-Air Scanner.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Air Scanner/Preview Content\"";
@@ -530,6 +662,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FEA8BABED1E31475AFCC7A49 /* Pods-Air Scanner.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Air Scanner/Preview Content\"";
@@ -557,6 +690,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE9E2F95247428D2006A11A1 /* Build configuration list for PBXNativeTarget "Air Scanner Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9E2F93247428D2006A11A1 /* Debug */,
+				CE9E2F94247428D2006A11A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CEF256C1245722AD00673749 /* Build configuration list for PBXProject "Air Scanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
