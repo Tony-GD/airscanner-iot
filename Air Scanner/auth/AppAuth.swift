@@ -9,5 +9,5 @@
 import Foundation
 
 class AppAuth: ObservableObject {
-    @Published var user: User = EmptyUser
+    @Published var user: User? = nil
 }

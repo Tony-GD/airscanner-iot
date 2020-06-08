@@ -14,9 +14,8 @@ struct MainView: View {
     @State private var selection = 0
    
     var body: some View {
-        NavigationView {
         TabView(selection: $selection){
-            Text("\(auth.user.email ?? "default value")")
+            Text("\(auth.user?.email ?? "default value")")
                 .font(.title)
                 .tabItem {
                     VStack {
@@ -27,6 +26,7 @@ struct MainView: View {
             .tag(0)
             VStack{
                 MapView()
+                    .edgesIgnoringSafeArea(.top)
             }
             .tabItem {
                 VStack {
@@ -45,7 +45,6 @@ struct MainView: View {
             }
             .tag(2)
         }
-    }
     }
 }
 

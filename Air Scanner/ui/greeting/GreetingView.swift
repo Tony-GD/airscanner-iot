@@ -10,36 +10,31 @@ import SwiftUI
 import GoogleSignIn
 
 struct GreetingView: View {
-    @EnvironmentObject var auth: AppAuth
-    
     var body: some View {
-        NavigationView {
-        VStack {
-            Spacer()
-            Image("gd_logo")
-            Button(action: {
-                self.openSignIn()
-                
-            },
-                   label: {
-                    Text("Sign In")
-            })
-            Spacer()
-            Text("or")
-            
-            NavigationLink(destination: MainView()) {Text("Continue as guest")}
-            
-            Spacer()
+        ZStack {
+            Image("logo")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
+            VStack {
+                Spacer()
+                VStack {
+                    Button(action: { self.openSignIn() }) {
+                        Text("Log In")
+                    }
+                    .frame(width: 258.0, height: 40.0)
+                    .buttonStyle(MainButtonStyle())
+                    .padding()
+                    Text("by")
+                        .font(.system(size: 10))
+                        .foregroundColor(Color.white)
+                    Image("gd_logo_small")
+                }
+                .padding(.bottom, 40)
+            }
+            Color.clear
         }
-        }
-    }
-    
-    func onSignInSuccess(user: User) {
-        auth.$user.append(user)
-    }
-    
-    func onSignInFail() {
-        
+        .background(Color.background)
     }
     
     func openSignIn() {

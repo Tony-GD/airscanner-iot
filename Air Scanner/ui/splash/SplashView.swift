@@ -12,8 +12,9 @@ struct SplashView: View {
     @EnvironmentObject var auth: AppAuth
     var body: some View {
         Group {
-            if auth.user == EmptyUser {
+            if auth.user == nil {
                 GreetingView()
+                    .edgesIgnoringSafeArea(.all)
             } else {
                 MainView()
             }

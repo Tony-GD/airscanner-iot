@@ -8,12 +8,10 @@
 
 import Foundation
 
-struct User: Encodable, Decodable, Equatable {
-    let id: String?
-    let idToken: String?
+struct User: Codable, Equatable {
+    let id: String
+    let idToken: String
     let givenName: String?
     let familyName: String?
     let email: String?
 }
-
-let EmptyUser = User(id: "", idToken: "", givenName: "", familyName: "", email: "")

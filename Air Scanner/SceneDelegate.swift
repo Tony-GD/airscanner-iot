@@ -21,14 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             appDelegate.auth = auth
         }
-        let localStorage = LocalStorageImpl()
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let user = localStorage.getUser()
-            print("scene will connect user \(user.email)")
-            auth.user = user
+            auth.user = LocalStorage.shared.user
             window.rootViewController = UIHostingController(rootView: SplashView().environmentObject(auth))
             self.window = window
             window.makeKeyAndVisible()

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		16598780DF6E530F15B5F927 /* Pods_Air_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FA5F2E607F0F0CD79C27CE /* Pods_Air_Scanner.framework */; };
+		71DC9279248E619B0029BC2F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC9278248E619B0029BC2F /* Utils.swift */; };
+		71DC927C248E72A10029BC2F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC927B248E72A10029BC2F /* UIView+.swift */; };
 		CE31048224605A6C00A92C6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE31048124605A6C00A92C6A /* GoogleService-Info.plist */; };
 		CE3D5B222469EFF00018DA6D /* AppAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D5B212469EFF00018DA6D /* AppAuth.swift */; };
 		CE6670C92465AFA700C5E443 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6670C82465AFA700C5E443 /* MapViewController.swift */; };
@@ -16,8 +18,7 @@
 		CE72FDD8245A0E4800279EB0 /* NetworkGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72FDD7245A0E4800279EB0 /* NetworkGateway.swift */; };
 		CE7967B124623DD3005CB691 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7967B024623DD3005CB691 /* MapView.swift */; };
 		CE803BE124615C9800D5F869 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BE024615C9800D5F869 /* User.swift */; };
-		CE803BE324615D1F00D5F869 /* LocalStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BE224615D1F00D5F869 /* LocalStorageImpl.swift */; };
-		CE803BE52461617700D5F869 /* AbstractLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BE42461617700D5F869 /* AbstractLocalStorage.swift */; };
+		CE803BE324615D1F00D5F869 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BE224615D1F00D5F869 /* LocalStorage.swift */; };
 		CE9966ED245A221A006DAD5D /* AddDeviceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9966EC245A221A006DAD5D /* AddDeviceResponse.swift */; };
 		CE9E2F88247428D2006A11A1 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9E2F87247428D2006A11A1 /* NotificationCenter.framework */; };
 		CE9E2F8B247428D2006A11A1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E2F8A247428D2006A11A1 /* TodayViewController.swift */; };
@@ -57,6 +58,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		71DC9278248E619B0029BC2F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		71DC927B248E72A10029BC2F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		93C41B503AE102CA865F8A29 /* Pods-Air Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Air Scanner.debug.xcconfig"; path = "Target Support Files/Pods-Air Scanner/Pods-Air Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		B4FA5F2E607F0F0CD79C27CE /* Pods_Air_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Air_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE31048124605A6C00A92C6A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -67,8 +70,7 @@
 		CE72FDD7245A0E4800279EB0 /* NetworkGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGateway.swift; sourceTree = "<group>"; };
 		CE7967B024623DD3005CB691 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CE803BE024615C9800D5F869 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CE803BE224615D1F00D5F869 /* LocalStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageImpl.swift; sourceTree = "<group>"; };
-		CE803BE42461617700D5F869 /* AbstractLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractLocalStorage.swift; sourceTree = "<group>"; };
+		CE803BE224615D1F00D5F869 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		CE9966EC245A221A006DAD5D /* AddDeviceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceResponse.swift; sourceTree = "<group>"; };
 		CE9E2F86247428D2006A11A1 /* Air Scanner Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Air Scanner Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E2F87247428D2006A11A1 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -121,6 +123,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		71DC927A248E72950029BC2F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				71DC927B248E72A10029BC2F /* UIView+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CE3D5B202469EFE20018DA6D /* auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				CE72FDD7245A0E4800279EB0 /* NetworkGateway.swift */,
-				CE803BE224615D1F00D5F869 /* LocalStorageImpl.swift */,
-				CE803BE42461617700D5F869 /* AbstractLocalStorage.swift */,
+				CE803BE224615D1F00D5F869 /* LocalStorage.swift */,
 			);
 			path = gateway;
 			sourceTree = "<group>";
@@ -175,6 +184,7 @@
 				CEEC64A92462F50E0065DDA6 /* splash */,
 				CEEC64A82462F4FB0065DDA6 /* greeting */,
 				CE7967AF24623DC2005CB691 /* map */,
+				71DC9278248E619B0029BC2F /* Utils.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -226,9 +236,9 @@
 		CEF256C8245722AE00673749 /* Air Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				71DC927A248E72950029BC2F /* Extensions */,
 				CE3D5B202469EFE20018DA6D /* auth */,
 				CEEC64A72462F4790065DDA6 /* ui */,
-				CE31048124605A6C00A92C6A /* GoogleService-Info.plist */,
 				CE72FDCB2459A4B300279EB0 /* gateway */,
 				CE72FDCA2459A48F00279EB0 /* model */,
 				CEF256C9245722AE00673749 /* AppDelegate.swift */,
@@ -236,6 +246,7 @@
 				CEF256CF245722B100673749 /* Assets.xcassets */,
 				CEF256D4245722B100673749 /* LaunchScreen.storyboard */,
 				CEF256D7245722B100673749 /* Info.plist */,
+				CE31048124605A6C00A92C6A /* GoogleService-Info.plist */,
 				CEF256D1245722B100673749 /* Preview Content */,
 				CEE47FC42464989100721641 /* AirScanner.Swift-Bridging-Header.h */,
 			);
@@ -434,15 +445,16 @@
 			files = (
 				CE72FDD8245A0E4800279EB0 /* NetworkGateway.swift in Sources */,
 				CE7967B124623DD3005CB691 /* MapView.swift in Sources */,
-				CE803BE324615D1F00D5F869 /* LocalStorageImpl.swift in Sources */,
+				CE803BE324615D1F00D5F869 /* LocalStorage.swift in Sources */,
+				71DC9279248E619B0029BC2F /* Utils.swift in Sources */,
 				CE9966ED245A221A006DAD5D /* AddDeviceResponse.swift in Sources */,
 				CE72FDCF2459AAE100279EB0 /* AddDeviceRequest.swift in Sources */,
 				CEEC64A62462EFC50065DDA6 /* SplashView.swift in Sources */,
 				CE6670C92465AFA700C5E443 /* MapViewController.swift in Sources */,
 				CEF256CA245722AE00673749 /* AppDelegate.swift in Sources */,
+				71DC927C248E72A10029BC2F /* UIView+.swift in Sources */,
 				CE803BE124615C9800D5F869 /* User.swift in Sources */,
 				CEF256CC245722AE00673749 /* SceneDelegate.swift in Sources */,
-				CE803BE52461617700D5F869 /* AbstractLocalStorage.swift in Sources */,
 				CE3D5B222469EFF00018DA6D /* AppAuth.swift in Sources */,
 				CE72FDCD2459AA9300279EB0 /* GreetingView.swift in Sources */,
 				CEF256CE245722AE00673749 /* MainView.swift in Sources */,
@@ -483,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6A4PB358T;
 				INFOPLIST_FILE = "Air Scanner Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6A4PB358T;
 				INFOPLIST_FILE = "Air Scanner Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -637,6 +651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Air Scanner/Preview Content\"";
+				DEVELOPMENT_TEAM = K6A4PB358T;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -666,6 +681,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Air Scanner/Preview Content\"";
+				DEVELOPMENT_TEAM = K6A4PB358T;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

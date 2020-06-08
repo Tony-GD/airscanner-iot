@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>713133371133-00gk4cvl3udiappkm950lu0ubustdelp.apps.googleusercontent.com</string>
+	<string>698147414199-eosb76hiiqo6seqdr9jog9hbjulrofrh.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.713133371133-00gk4cvl3udiappkm950lu0ubustdelp</string>
+	<string>com.googleusercontent.apps.698147414199-eosb76hiiqo6seqdr9jog9hbjulrofrh</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>713133371133-jh2n2kls0499ss5jrbvl2qc1o3sf68h3.apps.googleusercontent.com</string>
+	<string>698147414199-7b9pjt7ekj2r0u1j7a00hstqvrhc68pa.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBV-72h4Ra_kY3MzRo30nH0C3oQ6alJAnU</string>
+	<string>AIzaSyAmswoWhjhQRwiXxUaOjl72ozo-zK0vHdk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>713133371133</string>
+	<string>698147414199</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.griddynamics.connectedapps</string>
 	<key>PROJECT_ID</key>
-	<string>gd-gcp-techlead-experiments</string>
+	<string>gd-gcp-rnd-connected-apps</string>
 	<key>STORAGE_BUCKET</key>
-	<string>gd-gcp-techlead-experiments.appspot.com</string>
+	<string>gd-gcp-rnd-connected-apps.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +31,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:713133371133:ios:fcee82e121d0831d5dd894</string>
+	<string>1:698147414199:ios:9e8c57c2e4d3a2909e2d32</string>
 	<key>DATABASE_URL</key>
-	<string>https://gd-gcp-techlead-experiments.firebaseio.com</string>
+	<string>https://gd-gcp-rnd-connected-apps.firebaseio.com</string>
 </dict>
 </plist>
