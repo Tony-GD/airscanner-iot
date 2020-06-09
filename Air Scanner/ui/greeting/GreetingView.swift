@@ -10,36 +10,47 @@ import SwiftUI
 import GoogleSignIn
 
 struct GreetingView: View {
+    @EnvironmentObject var localStorage: LocalStorage
     var body: some View {
-        ZStack {
-            Image("logo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding()
+        ZStack(alignment: .topLeading) {
+            Color.background.edgesIgnoringSafeArea(.all)
             VStack {
-                Spacer()
-                VStack {
-                    Button(action: { self.openSignIn() }) {
-                        Text("Log In")
-                    }
-                    .frame(width: 258.0, height: 40.0)
-                    .buttonStyle(MainButtonStyle())
-                    .padding()
-                    Text("by")
-                        .font(.system(size: 10))
-                        .foregroundColor(Color.white)
-                    Image("gd_logo_small")
-                }
-                .padding(.bottom, 40)
+                Image("logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("by Grid Dynamics")
+                    .font(.system(size: 12))
+                    .foregroundColor(.darkText)
             }
-            Color.clear
+            .frame(width: 100)
+            .padding([.leading, .top], 20)
+            VStack(alignment: .center, spacing: 32) {
+                Spacer()
+                
+                Text("Hello!")
+                    .font(.system(size: 25, weight: .bold))
+                    .foregroundColor(.white)
+                
+                Text("Grid Dynamics has been engaged in technology thought leadership activities by attending industry conferences, organizing emerging technology meetup events and judging and hosting community robotics competitions, hackathons and workshops.")
+                    .font(.system(size: 15))
+                    .foregroundColor(.white)
+                    .lineLimit(nil)
+                    .padding([.leading, .trailing], 50)
+                
+                Button(action: {
+                    withAnimation {
+                        self.localStorage.greetingShown = true
+                    }
+                }) {
+                    Text("Let's go!")
+                }
+                .buttonStyle(MainButtonStyle())
+                .frame(width: 258, height: 40)
+                .padding(.top, 15)
+                
+                Spacer()
+            }
         }
-        .background(Color.background)
-    }
-    
-    func openSignIn() {
-        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
-        GIDSignIn.sharedInstance()?.signIn()
     }
 }
 

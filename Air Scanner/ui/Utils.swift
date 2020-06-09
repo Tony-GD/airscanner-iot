@@ -9,9 +9,10 @@
 import SwiftUI
 
 extension Color {
-    static let background = Color(UIColor(named: "Background")!)
-    static let mainButton = Color(UIColor(named: "MainButton")!)
-    static let mainButtonPressed = Color(UIColor(named: "MainButtonPressed")!)
+    static let background = Color("Background")
+    static let mainButton = Color("MainButton")
+    static let mainButtonPressed = Color("MainButtonPressed")
+    static let darkText = Color("DarkText")
 }
 
 

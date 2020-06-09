@@ -13,8 +13,17 @@ import WhirlyGlobe
 
 
 struct MapView : UIViewControllerRepresentable {
+    
+    private static var mapViewController: MapViewController? = nil
+    
     func makeUIViewController(context: Context) -> MapViewController {
-        return MapViewController()
+        
+        // Workaround of the well known bug of SwiftUI. It recreates the VC every time we change the tab in TabView
+        if MapView.mapViewController == nil {
+            MapView.mapViewController = MapViewController()
+        }
+        
+        return MapView.mapViewController!
     }
     
     func updateUIViewController(_ uiViewController:  MapViewController, context: Context) {

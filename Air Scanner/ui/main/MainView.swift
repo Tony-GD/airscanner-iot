@@ -10,41 +10,42 @@ import SwiftUI
 
 
 struct MainView: View {
-    @EnvironmentObject var auth: AppAuth
+    @EnvironmentObject var localStorage: LocalStorage
     @State private var selection = 0
-   
+    
     var body: some View {
         TabView(selection: $selection){
-            Text("\(auth.user?.email ?? "default value")")
+            MapView()
+                .edgesIgnoringSafeArea(.top)
+                .tabItem {
+                    Image("map")
+                }
+                .tag(0)
+            
+            Text("Add Device/Gateway view")
                 .font(.title)
                 .tabItem {
-                    VStack {
-                        Image("first")
-                        Text("Home")
-                    }
-            }
-            .tag(0)
-            VStack{
-                MapView()
-                    .edgesIgnoringSafeArea(.top)
-            }
-            .tabItem {
-                VStack {
-                    Image("second")
-                    Text("Map")
+                    Image("add")
+                }
+                .tag(1)
+            
+            Text("Settings View")
+                .font(.title)
+                .tabItem {
+                    Image("settings")
+                }
+                .tag(2)
+        }
+        .accentColor(.white)
+        .overlay(
+            ZStack {
+                if !localStorage.greetingShown {
+                    GreetingView()
+                        .zIndex(0)
+                        .transition(.opacity)
                 }
             }
-            .tag(1)
-            Text("Third View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("first")
-                        Text("Notifications")
-                    }
-            }
-            .tag(2)
-        }
+        )
     }
 }
 

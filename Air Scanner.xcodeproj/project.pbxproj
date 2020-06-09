@@ -11,7 +11,6 @@
 		71DC9279248E619B0029BC2F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC9278248E619B0029BC2F /* Utils.swift */; };
 		71DC927C248E72A10029BC2F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC927B248E72A10029BC2F /* UIView+.swift */; };
 		CE31048224605A6C00A92C6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE31048124605A6C00A92C6A /* GoogleService-Info.plist */; };
-		CE3D5B222469EFF00018DA6D /* AppAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D5B212469EFF00018DA6D /* AppAuth.swift */; };
 		CE6670C92465AFA700C5E443 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6670C82465AFA700C5E443 /* MapViewController.swift */; };
 		CE72FDCD2459AA9300279EB0 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72FDCC2459AA9300279EB0 /* GreetingView.swift */; };
 		CE72FDCF2459AAE100279EB0 /* AddDeviceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72FDCE2459AAE100279EB0 /* AddDeviceRequest.swift */; };
@@ -24,7 +23,6 @@
 		CE9E2F8B247428D2006A11A1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E2F8A247428D2006A11A1 /* TodayViewController.swift */; };
 		CE9E2F8E247428D2006A11A1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9E2F8C247428D2006A11A1 /* MainInterface.storyboard */; };
 		CE9E2F92247428D2006A11A1 /* Air Scanner Widget.appex in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = CE9E2F86247428D2006A11A1 /* Air Scanner Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CEEC64A62462EFC50065DDA6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC64A52462EFC50065DDA6 /* SplashView.swift */; };
 		CEF256CA245722AE00673749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF256C9245722AE00673749 /* AppDelegate.swift */; };
 		CEF256CC245722AE00673749 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF256CB245722AE00673749 /* SceneDelegate.swift */; };
 		CEF256CE245722AE00673749 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF256CD245722AE00673749 /* MainView.swift */; };
@@ -63,7 +61,6 @@
 		93C41B503AE102CA865F8A29 /* Pods-Air Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Air Scanner.debug.xcconfig"; path = "Target Support Files/Pods-Air Scanner/Pods-Air Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		B4FA5F2E607F0F0CD79C27CE /* Pods_Air_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Air_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE31048124605A6C00A92C6A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CE3D5B212469EFF00018DA6D /* AppAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAuth.swift; sourceTree = "<group>"; };
 		CE6670C82465AFA700C5E443 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CE72FDCC2459AA9300279EB0 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		CE72FDCE2459AAE100279EB0 /* AddDeviceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceRequest.swift; sourceTree = "<group>"; };
@@ -80,7 +77,6 @@
 		CEE47FC42464989100721641 /* AirScanner.Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirScanner.Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CEEC649D2462C7E10065DDA6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CEEC649E2462C7E10065DDA6 /* libswiftMapKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftMapKit.tbd; path = usr/lib/swift/libswiftMapKit.tbd; sourceTree = SDKROOT; };
-		CEEC64A52462EFC50065DDA6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		CEF256C6245722AE00673749 /* Air Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF256C9245722AE00673749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF256CB245722AE00673749 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,14 +127,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CE3D5B202469EFE20018DA6D /* auth */ = {
-			isa = PBXGroup;
-			children = (
-				CE3D5B212469EFF00018DA6D /* AppAuth.swift */,
-			);
-			path = auth;
-			sourceTree = "<group>";
-		};
 		CE72FDCA2459A48F00279EB0 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				CEEC64AA2462F5190065DDA6 /* main */,
-				CEEC64A92462F50E0065DDA6 /* splash */,
 				CEEC64A82462F4FB0065DDA6 /* greeting */,
 				CE7967AF24623DC2005CB691 /* map */,
 				71DC9278248E619B0029BC2F /* Utils.swift */,
@@ -195,14 +182,6 @@
 				CE72FDCC2459AA9300279EB0 /* GreetingView.swift */,
 			);
 			path = greeting;
-			sourceTree = "<group>";
-		};
-		CEEC64A92462F50E0065DDA6 /* splash */ = {
-			isa = PBXGroup;
-			children = (
-				CEEC64A52462EFC50065DDA6 /* SplashView.swift */,
-			);
-			path = splash;
 			sourceTree = "<group>";
 		};
 		CEEC64AA2462F5190065DDA6 /* main */ = {
@@ -237,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				71DC927A248E72950029BC2F /* Extensions */,
-				CE3D5B202469EFE20018DA6D /* auth */,
 				CEEC64A72462F4790065DDA6 /* ui */,
 				CE72FDCB2459A4B300279EB0 /* gateway */,
 				CE72FDCA2459A48F00279EB0 /* model */,
@@ -449,13 +427,11 @@
 				71DC9279248E619B0029BC2F /* Utils.swift in Sources */,
 				CE9966ED245A221A006DAD5D /* AddDeviceResponse.swift in Sources */,
 				CE72FDCF2459AAE100279EB0 /* AddDeviceRequest.swift in Sources */,
-				CEEC64A62462EFC50065DDA6 /* SplashView.swift in Sources */,
 				CE6670C92465AFA700C5E443 /* MapViewController.swift in Sources */,
 				CEF256CA245722AE00673749 /* AppDelegate.swift in Sources */,
 				71DC927C248E72A10029BC2F /* UIView+.swift in Sources */,
 				CE803BE124615C9800D5F869 /* User.swift in Sources */,
 				CEF256CC245722AE00673749 /* SceneDelegate.swift in Sources */,
-				CE3D5B222469EFF00018DA6D /* AppAuth.swift in Sources */,
 				CE72FDCD2459AA9300279EB0 /* GreetingView.swift in Sources */,
 				CEF256CE245722AE00673749 /* MainView.swift in Sources */,
 			);

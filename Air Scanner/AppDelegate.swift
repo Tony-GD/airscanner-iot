@@ -13,7 +13,6 @@ import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var auth: AppAuth?
     var window: UIWindow?
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
@@ -25,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance()?.clientID = "698147414199-eosb76hiiqo6seqdr9jog9hbjulrofrh.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
+        
+        configureAppearance()
         
         return true
     }
@@ -41,6 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    private func configureAppearance() {
+        UITabBar.appearance().barTintColor = UIColor(named: "TabBarBackground")
+        UITabBar.appearance().isTranslucent = false
     }
 }
 
@@ -84,7 +90,6 @@ extension AppDelegate: GIDSignInDelegate {
                         givenName: user.profile.givenName,
                         familyName: user.profile.familyName,
                         email: user.profile.email)
-        auth?.user = user
         LocalStorage.shared.user = user
     }
 }
