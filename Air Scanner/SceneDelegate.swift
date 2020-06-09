@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             let localStorage = LocalStorage.shared
-            window.rootViewController = UIHostingController(rootView: MainView().environmentObject(localStorage))
+            window.rootViewController = UIHostingController(rootView: MainView().environmentObject(localStorage).environment(\.window, window))
             self.window = window
             window.makeKeyAndVisible()
         }

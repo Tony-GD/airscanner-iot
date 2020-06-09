@@ -22,21 +22,20 @@ struct MainView: View {
                 }
                 .tag(0)
             
-            Text("Add Device/Gateway view")
-                .font(.title)
+            DevicesView()
                 .tabItem {
                     Image("add")
                 }
                 .tag(1)
             
-            Text("Settings View")
-                .font(.title)
+            SettingsView()
                 .tabItem {
                     Image("settings")
                 }
                 .tag(2)
         }
         .accentColor(.white)
+        .background(Color.background)
         .overlay(
             ZStack {
                 if !localStorage.greetingShown {

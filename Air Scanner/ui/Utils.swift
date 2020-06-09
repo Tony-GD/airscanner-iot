@@ -8,6 +8,22 @@
 
 import SwiftUI
 
+struct EnvironmentWindowKey: EnvironmentKey {
+    static var defaultValue: UIWindow? = nil
+}
+
+extension EnvironmentValues {
+    var window: UIWindow? {
+        get {
+            self[EnvironmentWindowKey.self]
+        }
+        
+        set {
+            self[EnvironmentWindowKey.self] = newValue
+        }
+    }
+}
+
 extension Color {
     static let background = Color("Background")
     static let mainButton = Color("MainButton")
