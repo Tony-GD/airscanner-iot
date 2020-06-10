@@ -97,6 +97,9 @@ PODS:
   - GTMSessionFetcher/Core (1.4.0)
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
   - libjson (7.6.1)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -145,6 +148,7 @@ DEPENDENCIES:
   - FirebaseUI/Auth
   - FirebaseUI/Google
   - GoogleSignIn
+  - Kingfisher
   - WhirlyGlobe
   - WhirlyGlobeResources
 
@@ -169,6 +173,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
+    - Kingfisher
     - libjson
     - nanopb
     - proj4
@@ -197,6 +202,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: ad0f3b691c67909d03a3327cc205222ab8f42e0e
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   libjson: 1a065ca64704a5d1b51c3754268998942d57ac6f
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   proj4: 234525105d05a33b2ae9a90a6fe3935f7a246f7e
@@ -205,6 +211,6 @@ SPEC CHECKSUMS:
   WhirlyGlobe: 2849f458220be42d92d814ba04377586cadbf7f1
   WhirlyGlobeResources: d7b3e929e828f958a8477ff6797f962fdb165472
 
-PODFILE CHECKSUM: 7d3e7e6fe2e3d7470080293a6f88ce9b0657908a
+PODFILE CHECKSUM: def77d36b4e02b7296307e5dda92a0d8d4b02681
 
 COCOAPODS: 1.9.1

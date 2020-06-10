@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureAppearance() {
         UITabBar.appearance().barTintColor = UIColor(named: "TabBarBackground")
-        UITabBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }
 
@@ -85,12 +85,18 @@ extension AppDelegate: GIDSignInDelegate {
           // ...
         }
         // Perform any operations on signed in user here.
-        let user = User(id: user.userID,
-                        idToken: user.authentication.idToken,
-                        givenName: user.profile.givenName,
-                        familyName: user.profile.familyName,
-                        email: user.profile.email)
-        LocalStorage.shared.user = user
+        
+        var photoURL: URL? = nil
+        if user.profile.hasImage {
+            photoURL = user.profile.imageURL(withDimension: UInt(round(UIScreen.main.scale * 60.0)))
+        }
+        
+        LocalStorage.shared.user = User(id: user.userID,
+                                        idToken: user.authentication.idToken,
+                                        givenName: user.profile.givenName,
+                                        familyName: user.profile.familyName,
+                                        email: user.profile.email,
+                                        photoURL: photoURL)
     }
 }
 

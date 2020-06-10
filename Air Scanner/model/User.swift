@@ -14,4 +14,13 @@ struct User: Codable, Equatable {
     let givenName: String?
     let familyName: String?
     let email: String?
+    let photoURL: URL?
+    
+    var fullName: String {
+        return [givenName, familyName].compactMap { $0 }.joined(separator: " ")
+    }
+    
+    var userName: String? {
+        return email.map { "@" + $0.components(separatedBy: "@").first! }
+    }
 }

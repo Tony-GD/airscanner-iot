@@ -11,4 +11,5 @@ target 'Air Scanner' do
   pod 'GoogleSignIn'
   pod 'WhirlyGlobe'
   pod 'WhirlyGlobeResources'
+  pod 'Kingfisher'
 end
