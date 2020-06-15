@@ -16,7 +16,6 @@ struct MainView: View {
     var body: some View {
         TabView(selection: $selection){
             MapView()
-                .edgesIgnoringSafeArea(.top)
                 .tabItem {
                     Image("map")
                 }

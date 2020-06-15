@@ -6,6 +6,8 @@ target 'Air Scanner' do
   use_frameworks!
 
   # Pods for Air Scanner
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
   pod 'FirebaseUI/Google'
   pod 'FirebaseUI/Auth'
   pod 'GoogleSignIn'

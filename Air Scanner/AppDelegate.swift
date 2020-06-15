@@ -9,6 +9,7 @@
 import UIKit
 import GoogleSignIn
 import Firebase
+import FirebaseFirestore
 import SwiftUI
 
 @UIApplicationMain
@@ -47,6 +48,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func configureAppearance() {
         UITabBar.appearance().barTintColor = UIColor(named: "TabBarBackground")
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        UITableView.appearance().tableFooterView = UIView()
+        UITableView.appearance().backgroundColor = .clear
+        UITableView.appearance().separatorStyle = .none
+        UITableViewCell.appearance().backgroundColor = .clear
+        let bgView = UIView()
+        bgView.backgroundColor = .clear
+        UITableViewCell.appearance().selectedBackgroundView = bgView
     }
 }
 
