@@ -43,13 +43,7 @@ final class MapDevicesStorage: ObservableObject {
         listener = Firestore.firestore().collection("devices").whereField("hasPublicMetrics", isEqualTo: true).addSnapshotListener { snapshot, error in
             guard let snapshot = snapshot else { return }
             self.devices = snapshot.documents.compactMap {
-                let data = $0.data()
-                guard let location = data["location"] as? GeoPoint else { return nil }
-                return Device(displayName: data["display_name"] as? String ?? "",
-                              dataFormat: (data["data_format"] as? String).flatMap(DeviceDataFormat.init),
-                              hasPublicMetrics: data["hasPublicMetrics"] as? Bool ?? false,
-                              location: (lat: Float(location.latitude), lon: Float(location.longitude)),
-                              publicMetrics: (data["publicMetrics"] as? [String] ?? []).compactMap(PublicMetric.init))
+                return Device(id: $0.documentID, data: $0.data())
             }
         }
     }

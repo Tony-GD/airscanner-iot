@@ -8,6 +8,16 @@
 
 import SwiftUI
 
+
+struct Formatters {
+    static let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 0
+        return formatter
+    }()
+}
+
 struct EnvironmentWindowKey: EnvironmentKey {
     static var defaultValue: UIWindow? = nil
 }

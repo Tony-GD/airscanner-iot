@@ -21,8 +21,10 @@ class MapViewController: UIViewController {
         }
     }
     
-    private var trackerViews: [UIView] = []
+    private var trackerViews: [PinView] = []
     private var userLocationObject: MaplyComponentObject?
+    
+    private var filter: PublicMetric? = nil
     
     var userLocation: Location? = nil {
         didSet {
@@ -64,7 +66,8 @@ class MapViewController: UIViewController {
         mapVC.animate(toPosition: userLocation.map { MaplyCoordinateMakeWithDegrees($0.lon, $0.lat) } ?? MaplyCoordinateMakeWithDegrees(-3.6704803, 40.5023056), time: 0.3)
     }
     
-    func configure(with devices: [Device]) {
+    func configure(with devices: [Device], filter: PublicMetric?) {
+        self.filter = filter
         self.devices = devices
     }
     
@@ -80,13 +83,14 @@ class MapViewController: UIViewController {
         trackerViews.removeAll()
         let trackers:[MaplyViewTracker] = devices.map {
             let view = PinView(frame: CGRect(x: -18.0, y: -52.0, width: 36.0, height: 52.0))
+            view.configure(with: $0, displayedMetric: self.filter)
             let tracker = MaplyViewTracker()
             tracker.loc = MaplyCoordinateMakeWithDegrees($0.location.lon, $0.location.lat)
             tracker.view = view
             return tracker
         }
         
-        self.trackerViews = trackers.map(\.view)
+        self.trackerViews = trackers.map { $0.view as! PinView }
         
         trackers.forEach { self.mapVC.add($0) }
     }

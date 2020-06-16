@@ -15,7 +15,10 @@ struct MapView: View {
     @State private var showFilters: Bool = false
     var body: some View {
         ZStack(alignment: .topLeading) {
-            WhirlyGlobeMapView(devices: storage.filteredDevices, userLocation: locationManager.location, moveToUserLocation: $moveToUserLocation)
+            WhirlyGlobeMapView(devices: storage.filteredDevices,
+                               userLocation: locationManager.location,
+                               filter: storage.filter,
+                               moveToUserLocation: $moveToUserLocation)
                 .edgesIgnoringSafeArea(.top)
                 .zIndex(0)
             HStack {

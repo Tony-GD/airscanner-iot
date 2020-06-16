@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import Combine
 
 class PinView: UIView {
     
     private var label: UILabel
+    private var bgView: UIView
+    private var device: Device?
+    
+    private var token: AnyCancellable?
+    private var displayedMetric: PublicMetric?
     
     override init(frame: CGRect) {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "Pin"))
@@ -24,10 +30,11 @@ class PinView: UIView {
         
         let label = UILabel(frame: .zero)
         label.backgroundColor = .clear
-        label.font = .systemFont(ofSize: 10, weight: .semibold)
+        label.font = .systemFont(ofSize: 9, weight: .semibold)
         label.textColor = .black
         
         self.label = label
+        self.bgView = bgView
         
         super.init(frame: frame)
         backgroundColor = .clear
@@ -56,8 +63,34 @@ class PinView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with value: String) {
-        label.text = value
+    func configure(with device: Device, displayedMetric: PublicMetric?) {
+        self.device = device
+        self.displayedMetric = displayedMetric
+        token?.cancel()
+        token = device.$metrics.sink { value in
+            self.updateValue(metrics: value, animated: true)
+        }
+    }
+    
+    private func updateValue(metrics: [String: Metric], animated: Bool = false) {
+        guard let metric = displayedMetric else {
+            label.text = nil
+            return
+        }
+        let value = device?.value(for: metric, metrics: metrics).flatMap { Formatters.numberFormatter.string(from: NSNumber(value: $0)) }
+        guard animated && value != nil && label.text != nil else {
+            label.text = value
+            return
+        }
+        
+        UIView.animate(withDuration: 0.15, animations: {
+            self.bgView.backgroundColor = .orange
+            self.label.text = value
+        }) { _ in
+            UIView.animate(withDuration: 0.15) {
+                self.bgView.backgroundColor = .white
+            }
+        }
     }
     
 }
