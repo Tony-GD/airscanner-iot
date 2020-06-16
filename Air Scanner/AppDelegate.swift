@@ -56,6 +56,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let bgView = UIView()
         bgView.backgroundColor = .clear
         UITableViewCell.appearance().selectedBackgroundView = bgView
+        
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named: "MainButton")
+        UISegmentedControl.appearance().setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 14),
+                                                                .foregroundColor: UIColor.white.withAlphaComponent(0.6) ],
+                                                               for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font: UIFont.boldSystemFont(ofSize: 14),
+                                                                .foregroundColor: UIColor.white],
+                                                               for: .selected)
     }
 }
 

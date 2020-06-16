@@ -39,18 +39,65 @@ extension Color {
     static let mainButton = Color("MainButton")
     static let mainButtonPressed = Color("MainButtonPressed")
     static let darkText = Color("DarkText")
+    static let inputBackground = Color("InputBackground")
 }
 
 
 struct MainButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         RoundedRectangle(cornerRadius: 2)
-            .fill(configuration.isPressed ? Color.mainButtonPressed : Color.mainButton)
-            .overlay(
+        .fill(configuration.isPressed ? Color.mainButtonPressed : Color.mainButton)
+        .overlay(
+            configuration
+                .label
+                .font(Font.system(size: 16, weight: .semibold))
+                .foregroundColor(.white)
+        )
+    }
+}
+
+struct DisclosureButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        RoundedRectangle(cornerRadius: 2)
+        .fill()
+        .overlay(
+            HStack {
                 configuration
                     .label
-                    .font(Font.system(size: 16, weight: .semibold))
-                    .foregroundColor(.white)
-            )
+                Spacer()
+                Image(systemName: "chevron.right")
+            }
+            .font(Font.system(size: 14))
+            .foregroundColor(.white)
+            .padding(.horizontal, 12)
+        )
+    }
+}
+
+struct GhostButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        RoundedRectangle(cornerRadius: 2)
+        .stroke(lineWidth: 1)
+            .foregroundColor(Color.white.opacity(0.6))
+            .background(configuration.isPressed ? Color.white.opacity(0.6) : Color.white.opacity(0.001))
+        .cornerRadius(2)
+        .overlay(
+            configuration
+                .label
+                .font(Font.system(size: 16, weight: .semibold))
+                .foregroundColor(configuration.isPressed ? .background : .white)
+        )
+    }
+}
+
+struct MainTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .padding(.horizontal, 12)
+            .frame(height: 36)
+            .font(.system(size: 14))
+            .foregroundColor(.white)
+            .background(Color.inputBackground)
+            .cornerRadius(2)
     }
 }
