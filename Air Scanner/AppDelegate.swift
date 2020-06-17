@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func configureAppearance() {
         UITabBar.appearance().barTintColor = UIColor(named: "TabBarBackground")
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().backgroundColor = UIColor(named: "Background")
         
         UITableView.appearance().tableFooterView = UIView()
         UITableView.appearance().backgroundColor = .clear

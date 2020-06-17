@@ -20,6 +20,7 @@
 		713D86BA2497A0C3003D8B56 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D86B92497A0C3003D8B56 /* MapView.swift */; };
 		713D8B732490FE360026126F /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D8B722490FE360026126F /* RemoteImage.swift */; };
 		713D8B752491035F0026126F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D8B742491035F0026126F /* ImageDownloader.swift */; };
+		7158DD17249A174B00CD7142 /* Gateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158DD16249A174B00CD7142 /* Gateway.swift */; };
 		719B3D3C24977800003ABA9E /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719B3D3B24977800003ABA9E /* PinView.swift */; };
 		71DC9279248E619B0029BC2F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC9278248E619B0029BC2F /* Utils.swift */; };
 		71DC927C248E72A10029BC2F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC927B248E72A10029BC2F /* UIView+.swift */; };
@@ -81,6 +82,7 @@
 		713D86B92497A0C3003D8B56 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		713D8B722490FE360026126F /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		713D8B742491035F0026126F /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		7158DD16249A174B00CD7142 /* Gateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gateway.swift; sourceTree = "<group>"; };
 		719B3D3B24977800003ABA9E /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		71DC9278248E619B0029BC2F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		71DC927B248E72A10029BC2F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				CE9966EC245A221A006DAD5D /* AddDeviceResponse.swift */,
 				CE803BE024615C9800D5F869 /* User.swift */,
 				713D86B524979A8E003D8B56 /* Device.swift */,
+				7158DD16249A174B00CD7142 /* Gateway.swift */,
 				713D86B724979C77003D8B56 /* MapDevicesStorage.swift */,
 				71090E9A2497AAFF007F969E /* LocationManager.swift */,
 			);
@@ -490,6 +493,7 @@
 				71DC927C248E72A10029BC2F /* UIView+.swift in Sources */,
 				CE803BE124615C9800D5F869 /* User.swift in Sources */,
 				71090E9B2497AAFF007F969E /* LocationManager.swift in Sources */,
+				7158DD17249A174B00CD7142 /* Gateway.swift in Sources */,
 				CEF256CC245722AE00673749 /* SceneDelegate.swift in Sources */,
 				CE72FDCD2459AA9300279EB0 /* GreetingView.swift in Sources */,
 				CEF256CE245722AE00673749 /* MainView.swift in Sources */,

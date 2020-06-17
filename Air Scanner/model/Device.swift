@@ -10,9 +10,18 @@ import Foundation
 import FirebaseFirestore
 import Combine
 
-enum DeviceDataFormat: String {
-    case singleValue = "single_value"
+enum DeviceDataFormat: String, CaseIterable {
     case json = "json"
+    case singleValue = "single_value"
+    
+    var displayName: String {
+        switch self {
+        case .json:
+            return "JSON Value"
+        case .singleValue:
+            return "Single Value"
+        }
+    }
 }
 
 typealias Location = (lat: Float, lon: Float)

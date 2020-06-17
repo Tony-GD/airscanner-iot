@@ -57,6 +57,19 @@ struct MainButtonStyle: ButtonStyle {
 }
 
 struct DisclosureButtonStyle: ButtonStyle {
+    
+    enum DisclosureChevronDirection: String {
+        case right
+        case up
+        case down
+        
+        var imageName: String {
+            return "chevron." + rawValue
+        }
+    }
+    
+    var direction: DisclosureChevronDirection = .right
+    
     func makeBody(configuration: Configuration) -> some View {
         RoundedRectangle(cornerRadius: 2)
         .fill()
@@ -65,7 +78,7 @@ struct DisclosureButtonStyle: ButtonStyle {
                 configuration
                     .label
                 Spacer()
-                Image(systemName: "chevron.right")
+                Image(systemName: direction.imageName)
             }
             .font(Font.system(size: 14))
             .foregroundColor(.white)
