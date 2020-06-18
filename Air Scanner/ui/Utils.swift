@@ -114,3 +114,30 @@ struct MainTextFieldStyle: TextFieldStyle {
             .cornerRadius(2)
     }
 }
+
+struct InfoAlertState {
+    enum AlertState {
+        case dismissed
+        case presented(String)
+        
+        var message: String? {
+            switch self {
+            case .dismissed:
+                return nil
+            case .presented(let message):
+                return message
+            }
+        }
+    }
+    var state: AlertState = .dismissed
+    var presened: Bool {
+        get {
+            if case .presented = state { return true }
+            return false
+        }
+        
+        set {
+            if !newValue { state = .dismissed }
+        }
+    }
+}

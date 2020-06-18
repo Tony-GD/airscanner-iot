@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         configureAppearance()
         
+        Authentication.refreshToken()
+        
         return true
     }
 
@@ -81,40 +83,8 @@ extension AppDelegate: GIDSignInDelegate {
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                           accessToken: authentication.accessToken)
-        Auth.auth().signIn(with: credential) { (authResult, error) in
-          if let error = error {
-            let authError = error as NSError
-            if (authError.code == AuthErrorCode.secondFactorRequired.rawValue) {
-              // The user is a multi-factor user. Second factor challenge is required.
-              let resolver = authError.userInfo[AuthErrorUserInfoMultiFactorResolverKey] as! MultiFactorResolver
-              var displayNameString = ""
-              for tmpFactorInfo in (resolver.hints) {
-                displayNameString += tmpFactorInfo.displayName ?? ""
-              }
-              print("auth error: \(displayNameString)")
-            } else {
-              print("auth error: \(error.localizedDescription)")
-              return
-            }
-            // ...
-            return
-          }
-          // User is signed in
-          // ...
-        }
-        // Perform any operations on signed in user here.
         
-        var photoURL: URL? = nil
-        if user.profile.hasImage {
-            photoURL = user.profile.imageURL(withDimension: UInt(round(UIScreen.main.scale * 60.0)))
-        }
-        
-        LocalStorage.shared.user = User(id: user.userID,
-                                        idToken: user.authentication.idToken,
-                                        givenName: user.profile.givenName,
-                                        familyName: user.profile.familyName,
-                                        email: user.profile.email,
-                                        photoURL: photoURL)
+        Authentication.signIn(with: credential, user: user)
     }
 }
 

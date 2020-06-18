@@ -10,7 +10,7 @@ import Foundation
 
 struct User: Codable, Equatable {
     let id: String
-    let idToken: String
+    var idToken: String
     let givenName: String?
     let familyName: String?
     let email: String?

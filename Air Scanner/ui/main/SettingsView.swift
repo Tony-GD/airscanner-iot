@@ -87,7 +87,7 @@ struct SettingsView: View {
         .alert(isPresented: $askForLogout) {
             return Alert(title: Text("Do you really want to sign out?"), message: nil, primaryButton: .cancel(), secondaryButton: .default(Text("Sign out"), action: {
                 withAnimation {
-                    self.localStorage.user = nil
+                    Authentication.signOut()
                 }
             }))
         }

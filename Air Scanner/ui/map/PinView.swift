@@ -79,7 +79,7 @@ class PinView: UIView {
         }
         let value = device?.value(for: metric, metrics: metrics).flatMap { Formatters.numberFormatter.string(from: NSNumber(value: $0)) }
         guard animated && value != nil && label.text != nil else {
-            label.text = value
+            label.text = value ?? "--"
             return
         }
         
