@@ -14,6 +14,7 @@ struct Authentication {
     static func signOut() {
         LocalStorage.shared.user = nil
         try? Auth.auth().signOut()
+        MapDevicesStorage.shared.unsubscribeFormUserSpecifcInfo()
     }
     
     static func signIn(with credential: AuthCredential, user: GIDGoogleUser) {
@@ -25,12 +26,13 @@ struct Authentication {
                 if user.profile.hasImage {
                     photoURL = user.profile.imageURL(withDimension: UInt(round(UIScreen.main.scale * 60.0)))
                 }
-                LocalStorage.shared.user = User(id: user.userID,
+                LocalStorage.shared.user = User(id: fbUser.uid,
                                                 idToken: token,
                                                 givenName: user.profile.givenName,
                                                 familyName: user.profile.familyName,
                                                 email: user.profile.email,
                                                 photoURL: photoURL)
+                MapDevicesStorage.shared.subscribeForUserSpecificInfo()
             }
         }
     }

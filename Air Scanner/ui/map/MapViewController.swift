@@ -23,6 +23,7 @@ class MapViewController: UIViewController {
     
     private var trackerViews: [PinView] = []
     private var userLocationObject: MaplyComponentObject?
+    private var pinTrackerView: UIImageView?
     
     private var filter: PublicMetric? = nil
     
@@ -32,10 +33,14 @@ class MapViewController: UIViewController {
         }
     }
     
+    var allowLocationSelection: Bool = false
+    var didSelectLocation: ((Location?) -> ())?
+    
     private lazy var mapVC: MaplyViewController = {
         let vc: MaplyViewController = MaplyViewController(asFlatMap: ())
         vc.clearColor = .white
         vc.frameInterval = 2
+        vc.delegate = self
         return vc
     }()
     
@@ -69,6 +74,11 @@ class MapViewController: UIViewController {
     func configure(with devices: [Device], filter: PublicMetric?) {
         self.filter = filter
         self.devices = devices
+    }
+    
+    func configure(with pinLocation: Location?) {
+        guard let location = pinLocation else { return }
+        addLocationMarker(at: MaplyCoordinateMakeWithDegrees(location.lon, location.lat))
     }
     
     func moveToUserLocation() {
@@ -111,5 +121,44 @@ class MapViewController: UIViewController {
         marker.image = #imageLiteral(resourceName: "location_pin")
         marker.loc = MaplyCoordinateMakeWithDegrees(location.lon, location.lat)
         self.userLocationObject = mapVC.addScreenMarkers([marker], desc: [:])
+    }
+    
+    private func addLocationMarker(at coord: MaplyCoordinate) {
+        if let pinTrackerView = self.pinTrackerView {
+            mapVC.removeViewTrack(for: pinTrackerView)
+        }
+        
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "pin_icon"))
+        imageView.tintColor = .black
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .clear
+        imageView.frame = CGRect(x: -22.0, y: -40.0, width: 44, height: 40)
+        
+        let tracker = MaplyViewTracker()
+        tracker.loc = coord
+        tracker.view = imageView
+        pinTrackerView = imageView
+        
+        mapVC.add(tracker)
+    }
+}
+
+extension Float {
+    var radiansToDegrees: Float {
+        self * 180.0 / .pi
+    }
+}
+
+extension MaplyCoordinate {
+    var location: Location {
+        (lat: y.radiansToDegrees, lon: x.radiansToDegrees)
+    }
+}
+
+extension MapViewController: MaplyViewControllerDelegate {
+    func maplyViewController(_ viewC: MaplyViewController!, didTapAt coord: MaplyCoordinate) {
+        guard allowLocationSelection else { return }
+        addLocationMarker(at: coord)
+        didSelectLocation?(coord.location)
     }
 }

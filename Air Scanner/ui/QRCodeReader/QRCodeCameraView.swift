@@ -10,14 +10,17 @@ import SwiftUI
 
 struct QRCodeCameraView: UIViewControllerRepresentable {
     
-    var completion: (String) -> ()
-    
+    @Binding var isDisplayed: Bool
+    @Binding var token: String
     
     func makeUIViewController(context: Context) -> QRCodeReaderViewController {
         return QRCodeReaderViewController()
     }
     
     func updateUIViewController(_ uiViewController:  QRCodeReaderViewController, context: Context) {
-        uiViewController.completion = completion
+        uiViewController.completion = { token in
+            self.token = token
+            self.isDisplayed = false
+        }
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 import FirebaseFirestore
 import Combine
 
-enum DeviceDataFormat: String, CaseIterable {
+enum DeviceDataFormat: String, CaseIterable, Encodable {
     case json = "json"
     case singleValue = "single_value"
     
@@ -46,7 +46,11 @@ struct Metric {
     let lastUpdate: TimeInterval
 }
 
-final class Device {
+func ==(lhs: Device, rhs: Device) -> Bool {
+    lhs.id == rhs.id
+}
+
+final class Device: Hashable {
     let id: String
     let displayName: String
     let dataFormat: DeviceDataFormat
@@ -97,6 +101,10 @@ final class Device {
                 self?.metrics[document.documentID] = metric
             }
         }
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
     
     func value(for publicMetric: PublicMetric, metrics: [String: Metric]) -> Double? {

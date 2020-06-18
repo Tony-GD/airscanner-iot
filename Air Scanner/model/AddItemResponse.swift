@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct AddGatewayResponse: Decodable {
+struct AddItemResponse: Decodable {
     let id: String
 }

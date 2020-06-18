@@ -15,6 +15,7 @@ struct DeviceState {
     var gateway: Gateway? = nil
     var location: Location? = nil
     var dataFormatIndex: Int = 0
+    var key: String = ""
     
     var locationDescription: String {
         get { location.map { ["\($0.lat)", "\($0.lon)"].joined(separator: " ") } ?? "" }
@@ -24,10 +25,39 @@ struct DeviceState {
     var dataFormat: DeviceDataFormat {
         DeviceDataFormat.allCases[dataFormatIndex]
     }
+    
+    var isValid: Bool {
+        !name.isEmpty && !description.isEmpty && location != nil && (gateway != nil || !key.isEmpty)
+    }
+    
+    var request: AddDeviceRequest {
+        let key = gateway == nil ? self.key : ""
+        return AddDeviceRequest(key: key,
+                         gatewayId: gateway?.id ?? "",
+                         displayName: name,
+                         isPublic: false,
+                         locLat: location?.lat ?? 0,
+                         locLon: location?.lon ?? 0,
+                         dataFormat: dataFormat,
+                         locationDescription: description)
+    }
+    
+    mutating func clear() {
+        name = ""
+        description = ""
+        gateway = nil
+        location = nil
+        dataFormatIndex = 0
+        key = ""
+     }
 }
 
 struct NewDeviceView: View {
     @Binding var state: DeviceState
+    @State var readQRCode: Bool = false
+    @State var selectGateway: Bool = false
+    @State var selectLocation: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             VStack(alignment: .leading, spacing: 2) {
@@ -49,13 +79,16 @@ struct NewDeviceView: View {
                 Text("Gateway")
                     .font(.system(size: 14))
                     .foregroundColor(.white)
-                Button(action: {}) {
+                Button(action: { self.selectGateway = true }) {
                     Text(state.gateway != nil ? state.gateway!.name : "Gateway")
                 }
-                .buttonStyle(DisclosureButtonStyle(direction: .down))
+                .buttonStyle(DisclosureButtonStyle())
                 .foregroundColor(.inputBackground)
                 .frame(height: 36.0)
                 .frame(maxWidth: .infinity)
+                .overlay(
+                    NavigationLink(destination: GatewayListView(isDisplayed: $selectGateway, gateway: $state.gateway), isActive: $selectGateway) { EmptyView() }
+                )
             }
             
             if state.gateway == nil {
@@ -63,13 +96,16 @@ struct NewDeviceView: View {
                     Text("Key")
                         .font(.system(size: 14))
                         .foregroundColor(.white)
-                    Button(action: {}) {
-                        Text("Scan the QR code")
+                    Button(action: { self.readQRCode = true }) {
+                        Text(state.key.isEmpty ? "Scan the QR code" : state.key)
                     }
                     .buttonStyle(DisclosureButtonStyle())
                     .foregroundColor(.inputBackground)
                     .frame(height: 36.0)
                     .frame(maxWidth: .infinity)
+                    .overlay(
+                        NavigationLink(destination: QRCodeReaderView(isDisplayed: $readQRCode, token: $state.key), isActive: $readQRCode) { EmptyView() }
+                    )
                 }
             }
             
@@ -77,14 +113,18 @@ struct NewDeviceView: View {
                 Text("Location")
                     .font(.system(size: 14))
                     .foregroundColor(.white)
-                Button(action: {}) {
+                Button(action: { self.selectLocation = true }) {
                     HStack(spacing: 0) {
                         TextField("Select your location", text: $state.locationDescription)
                             .textFieldStyle(MainTextFieldStyle())
+                            .disabled(true)
                         Image("pin_icon")
                             .foregroundColor(.white)
                     }
                 }
+                .overlay(
+                    NavigationLink(destination: LocationSelectionView(location: $state.location, isDisplayed: $selectLocation), isActive: $selectLocation) { EmptyView() }
+                )
             }
             
             VStack(alignment: .leading, spacing: 2) {
@@ -146,10 +186,7 @@ struct NewGatewayView: View {
                 .frame(height: 36.0)
                 .frame(maxWidth: .infinity)
                 .overlay(
-                    NavigationLink(destination: QRCodeReaderView {
-                        self.state.key = $0
-                        self.readQRCode = false
-                    }, isActive: $readQRCode) { EmptyView() }
+                    NavigationLink(destination: QRCodeReaderView(isDisplayed: $readQRCode, token: $state.key), isActive: $readQRCode) { EmptyView() }
                 )
             }
         }
@@ -162,7 +199,8 @@ struct DevicesView: View {
     @State private var gatewayState = GatewayState()
     @State private var deviceState = DeviceState()
     @State private var alertState = InfoAlertState()
-    @ObservedObject var gatewayEndpoint = Endpoint<AddGatewayResponse>()
+    @ObservedObject var gatewayEndpoint = Endpoint<AddItemResponse>(baseURL: API.baseURL, path: "gateway", method: .post)
+    @ObservedObject var deviceEndpoint = Endpoint<AddItemResponse>(baseURL: API.baseURL, path: "device", method: .post)
     
     @State private var isLoading: Bool = false
     
@@ -188,7 +226,12 @@ struct DevicesView: View {
                 VStack {
                     Spacer()
                     Button(action: {
-                        self.createGateway()
+                        if self.objectType == 0 {
+                            self.createDevice()
+                        } else {
+                            self.createGateway()
+                        }
+                        
                     }) {
                         ZStack {
                             if (!self.isLoading) {
@@ -198,7 +241,7 @@ struct DevicesView: View {
                         }
                     }
                     .buttonStyle(MainButtonStyle())
-                    .disabled(!gatewayState.isValid || isLoading)
+                    .disabled(isLoading || (objectType == 0 && !deviceState.isValid) || (objectType == 1 && !gatewayState.isValid))
                     .frame(height: 40)
                     .frame(maxWidth: .infinity)
                 }
@@ -213,6 +256,18 @@ struct DevicesView: View {
             case .success?:
                 self.alertState.state = .presented("\(self.gatewayState.name) gateway successfully added")
                 self.gatewayState.clear()
+            case .failure(let error)?:
+                self.alertState.state = .presented(error.localizedDescription)
+            case nil:
+                self.alertState.state = .dismissed
+            }
+        }
+        .onReceive(deviceEndpoint.$result) { result in
+            self.isLoading = false
+            switch result {
+            case .success?:
+                self.alertState.state = .presented("\(self.deviceState.name) device successfully added")
+                self.deviceState.clear()
             case .failure(let error)?:
                 self.alertState.state = .presented(error.localizedDescription)
             case nil:
@@ -235,7 +290,12 @@ struct DevicesView: View {
     
     private func createGateway() {
         isLoading = true
-        gatewayEndpoint.load(baseURL: API.baseURL, path: "gateway", params: gatewayState.request, method: .post)
+        gatewayEndpoint.load(params: gatewayState.request)
+    }
+    
+    private func createDevice() {
+        isLoading = true
+        deviceEndpoint.load(params: deviceState.request)
     }
 }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum HTTPMeethod: String {
+enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
@@ -47,7 +47,18 @@ final class Endpoint<A: Decodable>: ObservableObject {
     
     @Published var result: Result<A, EndpointError>?
     private var dataTask: URLSessionDataTask?
-    func load<B: Encodable>(baseURL: URL, path: String, params: B?, method: HTTPMeethod) {
+    
+    private let baseURL: URL
+    private let path: String
+    private let method: HTTPMethod
+    
+    init(baseURL: URL, path: String, method: HTTPMethod) {
+        self.baseURL = baseURL
+        self.path = path
+        self.method = method
+    }
+    
+    func load<B: Encodable>(params: B?) {
         dataTask?.cancel()
         let url = baseURL.appendingPathComponent(path)
         var request = URLRequest(url: url)
@@ -83,8 +94,6 @@ final class Endpoint<A: Decodable>: ObservableObject {
                 return
             }
             
-            print(data.flatMap({ String(data: $0, encoding: .utf8) }) ?? "No data")
-            
             if (200..<300) ~= httpResponse.statusCode {
                 if let value = data.flatMap({ try? self?.decoder.decode(A.self, from: $0) }) {
                     self?.update(with: .success(value))
@@ -92,7 +101,6 @@ final class Endpoint<A: Decodable>: ObservableObject {
                     self?.update(with: .failure(.other))
                 }
             } else {
-                print("!!!status code:\(httpResponse.statusCode)")
                 self?.update(with: .failure(.other))
             }
         }

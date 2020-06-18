@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Gateway {
+struct Gateway {
     let id: String
     let name: String
     

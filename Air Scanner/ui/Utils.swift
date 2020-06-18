@@ -44,15 +44,24 @@ extension Color {
 
 
 struct MainButtonStyle: ButtonStyle {
+    
     func makeBody(configuration: Configuration) -> some View {
         RoundedRectangle(cornerRadius: 2)
-        .fill(configuration.isPressed ? Color.mainButtonPressed : Color.mainButton)
-        .overlay(
+            .fill(configuration.isPressed ? Color.mainButtonPressed : Color.mainButton)
+            .overlay(
+                MainButton(configuration: configuration)
+            )
+    }
+    
+    struct MainButton: View {
+        @Environment(\.isEnabled) private var isEnabled: Bool
+        var configuration: ButtonStyle.Configuration
+        var body: some View {
             configuration
                 .label
                 .font(Font.system(size: 16, weight: .semibold))
-                .foregroundColor(.white)
-        )
+                .foregroundColor(isEnabled ? .white : .gray)
+        }
     }
 }
 

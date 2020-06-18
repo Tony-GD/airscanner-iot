@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct QRCodeReaderView: View {
-    var completion: (String) -> ()
+    @Binding var isDisplayed: Bool
+    @Binding var token: String
     var body: some View {
         ZStack {
             Color.background.edgesIgnoringSafeArea(.all)
-            QRCodeCameraView(completion: completion)
+            QRCodeCameraView(isDisplayed: $isDisplayed, token: $token)
         }.navigationBarTitle("QR Code", displayMode: .inline)
     }
 }

@@ -24,7 +24,9 @@ struct WhirlyGlobeMapView : UIViewControllerRepresentable {
         
         // Workaround of the well known bug of SwiftUI. It recreates the VC every time we change the tab in TabView
         if WhirlyGlobeMapView.mapViewController == nil {
-            WhirlyGlobeMapView.mapViewController = MapViewController()
+            let controller = MapViewController()
+            controller.userLocation = userLocation
+            WhirlyGlobeMapView.mapViewController = controller
         }
         
         return WhirlyGlobeMapView.mapViewController!
