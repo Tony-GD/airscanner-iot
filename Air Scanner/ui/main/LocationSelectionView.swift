@@ -17,6 +17,7 @@ struct LocationSelectionView: View {
     
     var body: some View {
         ZStack {
+            Color.background.edgesIgnoringSafeArea(.all)
             SelectLocationMapView(userLocation: locationManager.location, location: $location)
             if location != nil {
                 VStack {

@@ -208,46 +208,56 @@ struct DevicesView: View {
     
     var body: some View {
         NavigationView {
-            ZStack(alignment: .topLeading) {
-                Color.background.edgesIgnoringSafeArea(.all)
-                VStack(spacing: 36) {
-                    Picker(selection: $objectType, label: EmptyView()) {
-                        ForEach(0..<objectTypes.count) {
-                            Text(self.objectTypes[$0])
-                        }
-                    }.pickerStyle(SegmentedPickerStyle())
-                    if objectType == 0 {
-                        NewDeviceView(state: $deviceState)
-                    } else {
-                        NewGatewayView(state: $gatewayState)
-                    }
-                }
-                .padding()
-                VStack {
-                    Spacer()
-                    Button(action: {
-                        if self.objectType == 0 {
-                            self.createDevice()
-                        } else {
-                            self.createGateway()
-                        }
-                        
-                    }) {
-                        ZStack {
-                            if (!self.isLoading) {
-                                Text(objectType == 0 ? "Add device" : "Add gateway")
+            GeometryReader { proxy in
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 0) {
+                        ZStack(alignment: .topLeading) {
+                            Color.background.edgesIgnoringSafeArea(.all)
+                            VStack(spacing: 36) {
+                                Picker(selection: self.$objectType, label: EmptyView()) {
+                                    ForEach(0..<self.objectTypes.count) {
+                                        Text(self.objectTypes[$0])
+                                    }
+                                }.pickerStyle(SegmentedPickerStyle())
+                                if self.objectType == 0 {
+                                    NewDeviceView(state: self.$deviceState)
+                                } else {
+                                    NewGatewayView(state: self.$gatewayState)
+                                }
+                                Color.background.frame(width: 40, height: 60)
                             }
-                            LoadingIndicator(isLoading: self.isLoading, color: .white)
+                            .padding()
+                            VStack {
+                                Spacer()
+                                Button(action: {
+                                    if self.objectType == 0 {
+                                        self.createDevice()
+                                    } else {
+                                        self.createGateway()
+                                    }
+                                    
+                                }) {
+                                    ZStack {
+                                        if (!self.isLoading) {
+                                            Text(self.objectType == 0 ? "Add device" : "Add gateway")
+                                        }
+                                        LoadingIndicator(isLoading: self.isLoading, color: .white)
+                                    }
+                                }
+                                .buttonStyle(MainButtonStyle())
+                                .disabled(self.isLoading || (self.objectType == 0 && !self.deviceState.isValid) || (self.objectType == 1 && !self.gatewayState.isValid))
+                                .frame(height: 40)
+                                .frame(maxWidth: .infinity)
+                                .padding(.bottom)
+                            }.padding()
                         }
+                        .frame(minHeight: proxy.size.height)
+                        .disabled(self.isLoading)
+                        Color.background.frame(width: proxy.size.width, height: proxy.safeAreaInsets.bottom)
                     }
-                    .buttonStyle(MainButtonStyle())
-                    .disabled(isLoading || (objectType == 0 && !deviceState.isValid) || (objectType == 1 && !gatewayState.isValid))
-                    .frame(height: 40)
-                    .frame(maxWidth: .infinity)
                 }
-                .padding()
+                .edgesIgnoringSafeArea(.bottom)
             }
-            .disabled(isLoading)
             .navigationBarTitle("Add new")
         }
         .onReceive(gatewayEndpoint.$result) { result in
