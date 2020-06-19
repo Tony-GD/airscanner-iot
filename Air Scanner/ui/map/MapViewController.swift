@@ -53,15 +53,20 @@ class MapViewController: UIViewController {
         let coordSystem = MaplySphericalMercator(webStandard: ())
         
         let baseCacheDir = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
-        let tilesCacheDir = "\(baseCacheDir)/stamentiles/"
-        let maxZoom = Int32(18)
-        guard let tileSource = MaplyRemoteTileSource(
-                baseURL: "http://tile.stamen.com/terrain/",
-                ext: "png",
-                minZoom: 0,
-                maxZoom: maxZoom) else {
-            return
-        }
+        let tilesCacheDir = "\(baseCacheDir)/openstreetmaptiles/"
+        
+        
+        let tilesConfig: [AnyHashable: Any] = [
+            "tilejson": "1.1.0",
+            "scheme": "xyz",
+            "minzoom": 0,
+            "maxzoom": 30,
+            "tiles": [
+                "https://api.mapbox.com/styles/v1/ysieniahin/ckax5zb990bfe1imu0x31a26f/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoieXNpZW5pYWhpbiIsImEiOiJja2F4NXhhZTUwMzByMzR1bDZlYTNqMHloIn0.EqHwTIS-HVioek5o9fYl9w"
+            ]
+        ]
+        
+        guard let tileSource = MaplyRemoteTileSource(tilespec: tilesConfig) else { return }
         
         tileSource.cacheDir = tilesCacheDir
         let layer = MaplyQuadImageTilesLayer(coordSystem: coordSystem, tileSource: tileSource)!
