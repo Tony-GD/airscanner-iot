@@ -50,7 +50,7 @@ func ==(lhs: Device, rhs: Device) -> Bool {
     lhs.id == rhs.id
 }
 
-final class Device: Hashable {
+final class Device: Hashable, ObservableObject {
     let id: String
     let displayName: String
     let dataFormat: DeviceDataFormat
@@ -58,6 +58,8 @@ final class Device: Hashable {
     let location: Location
     let publicMetrics: [PublicMetric]
     let config: [String: [MetricConfig]]
+    let locationDescription: String
+    let gatewayId: String
     @Published var metrics: [String: Metric] = [:]
     
     var listener: ListenerRegistration?
@@ -76,6 +78,8 @@ final class Device: Hashable {
         self.hasPublicMetrics = data["hasPublicMetrics"] as? Bool ?? false
         self.location = (lat: Float(location.latitude), lon: Float(location.longitude))
         self.publicMetrics = (data["publicMetrics"] as? [String] ?? []).compactMap(PublicMetric.init)
+        self.locationDescription = data["location_description"] as? String ?? ""
+        self.gatewayId = data["gateway_id"] as? String ?? ""
         
         guard let metricsConfig = data["metricsConfig"] as? [String: Any] else {
             self.config = [:]

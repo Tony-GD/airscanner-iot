@@ -27,7 +27,7 @@ struct MainView: View {
                 }
                 .tag(1)
             
-            SettingsView()
+            SettingsView(selectedTab: $selection)
                 .tabItem {
                     Image("settings")
                 }

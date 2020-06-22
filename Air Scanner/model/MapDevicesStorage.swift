@@ -13,7 +13,7 @@ import FirebaseFirestore
 final class MapDevicesStorage: ObservableObject {
     static let shared = MapDevicesStorage()
     @Published private var devices: [Device] = []
-    @Published private var userDevices: [Device] = []
+    @Published var userDevices: [Device] = []
     @Published var gateways: [Gateway] = []
     @Published var filter: PublicMetric? = nil
     

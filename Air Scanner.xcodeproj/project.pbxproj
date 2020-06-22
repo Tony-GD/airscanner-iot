@@ -33,6 +33,8 @@
 		7158DD4D249B8E9000CD7142 /* GatewayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158DD4C249B8E9000CD7142 /* GatewayListView.swift */; };
 		7158DD4F249B96C000CD7142 /* LocationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158DD4E249B96C000CD7142 /* LocationSelectionView.swift */; };
 		7158DD51249B9D5500CD7142 /* SelectLocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158DD50249B9D5400CD7142 /* SelectLocationMapView.swift */; };
+		715B133424A0B7F4007D8A3A /* GatewayDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B133324A0B7F4007D8A3A /* GatewayDetailsView.swift */; };
+		715B133624A0B8D1007D8A3A /* DeviceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B133524A0B8D1007D8A3A /* DeviceDetailsView.swift */; };
 		719B3D3C24977800003ABA9E /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719B3D3B24977800003ABA9E /* PinView.swift */; };
 		71DC9279248E619B0029BC2F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC9278248E619B0029BC2F /* Utils.swift */; };
 		71DC927C248E72A10029BC2F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC927B248E72A10029BC2F /* UIView+.swift */; };
@@ -105,6 +107,8 @@
 		7158DD4C249B8E9000CD7142 /* GatewayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayListView.swift; sourceTree = "<group>"; };
 		7158DD4E249B96C000CD7142 /* LocationSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSelectionView.swift; sourceTree = "<group>"; };
 		7158DD50249B9D5400CD7142 /* SelectLocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationMapView.swift; sourceTree = "<group>"; };
+		715B133324A0B7F4007D8A3A /* GatewayDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayDetailsView.swift; sourceTree = "<group>"; };
+		715B133524A0B8D1007D8A3A /* DeviceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailsView.swift; sourceTree = "<group>"; };
 		719B3D3B24977800003ABA9E /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		71DC9278248E619B0029BC2F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		71DC927B248E72A10029BC2F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -195,6 +199,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		715B133224A0B7C6007D8A3A /* details */ = {
+			isa = PBXGroup;
+			children = (
+				715B133324A0B7F4007D8A3A /* GatewayDetailsView.swift */,
+				715B133524A0B8D1007D8A3A /* DeviceDetailsView.swift */,
+			);
+			path = details;
+			sourceTree = "<group>";
+		};
 		71DC927A248E72950029BC2F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +266,7 @@
 		CEEC64A72462F4790065DDA6 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				715B133224A0B7C6007D8A3A /* details */,
 				7158DD18249A2D5900CD7142 /* QRCodeReader */,
 				713C6CCC248FB66E00707F69 /* login */,
 				CEEC64AA2462F5190065DDA6 /* main */,
@@ -525,10 +539,12 @@
 				7158DD4D249B8E9000CD7142 /* GatewayListView.swift in Sources */,
 				CE803BE324615D1F00D5F869 /* LocalStorage.swift in Sources */,
 				71090E9F2497C6D0007F969E /* FilterCell.swift in Sources */,
+				715B133624A0B8D1007D8A3A /* DeviceDetailsView.swift in Sources */,
 				7158DD1E249A30CA00CD7142 /* QRCodeReaderViewController.swift in Sources */,
 				7158DD41249A768A00CD7142 /* Endpoint.swift in Sources */,
 				71DC9279248E619B0029BC2F /* Utils.swift in Sources */,
 				713C6CD4248FBEB600707F69 /* LoadingIndicator.swift in Sources */,
+				715B133424A0B7F4007D8A3A /* GatewayDetailsView.swift in Sources */,
 				7158DD4B249B6E1F00CD7142 /* AddDeviceRequest.swift in Sources */,
 				7158DD4F249B96C000CD7142 /* LocationSelectionView.swift in Sources */,
 				713D86BA2497A0C3003D8B56 /* MapView.swift in Sources */,

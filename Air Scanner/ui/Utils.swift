@@ -42,6 +42,7 @@ extension Color {
     static let inputBackground = Color("InputBackground")
     static let successAlert = Color("SuccessAlert")
     static let errorAlert = Color("ErrorAlert")
+    static let secondaryText = Color("SecondaryText")
 }
 
 

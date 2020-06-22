@@ -114,7 +114,7 @@ struct NewDeviceView: View {
                     .font(.system(size: 14))
                     .foregroundColor(.white)
                 Button(action: { self.selectLocation = true }) {
-                    HStack(spacing: 0) {
+                    HStack(spacing: 15) {
                         TextField("Select your location", text: $state.locationDescription)
                             .textFieldStyle(MainTextFieldStyle())
                             .disabled(true)
