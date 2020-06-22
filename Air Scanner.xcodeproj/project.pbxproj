@@ -36,6 +36,7 @@
 		719B3D3C24977800003ABA9E /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719B3D3B24977800003ABA9E /* PinView.swift */; };
 		71DC9279248E619B0029BC2F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC9278248E619B0029BC2F /* Utils.swift */; };
 		71DC927C248E72A10029BC2F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC927B248E72A10029BC2F /* UIView+.swift */; };
+		71F8F322249D0F490014886B /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8F321249D0F490014886B /* AlertView.swift */; };
 		CE31048224605A6C00A92C6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE31048124605A6C00A92C6A /* GoogleService-Info.plist */; };
 		CE6670C92465AFA700C5E443 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6670C82465AFA700C5E443 /* MapViewController.swift */; };
 		CE72FDCD2459AA9300279EB0 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72FDCC2459AA9300279EB0 /* GreetingView.swift */; };
@@ -107,6 +108,7 @@
 		719B3D3B24977800003ABA9E /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		71DC9278248E619B0029BC2F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		71DC927B248E72A10029BC2F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		71F8F321249D0F490014886B /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		93C41B503AE102CA865F8A29 /* Pods-Air Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Air Scanner.debug.xcconfig"; path = "Target Support Files/Pods-Air Scanner/Pods-Air Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		B4FA5F2E607F0F0CD79C27CE /* Pods_Air_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Air_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE31048124605A6C00A92C6A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				CE7967AF24623DC2005CB691 /* map */,
 				71DC9278248E619B0029BC2F /* Utils.swift */,
 				713C6CD3248FBEB600707F69 /* LoadingIndicator.swift */,
+				71F8F321249D0F490014886B /* AlertView.swift */,
 				713D8B722490FE360026126F /* RemoteImage.swift */,
 				713D8B742491035F0026126F /* ImageDownloader.swift */,
 			);
@@ -548,6 +551,7 @@
 				CEF256CC245722AE00673749 /* SceneDelegate.swift in Sources */,
 				CE72FDCD2459AA9300279EB0 /* GreetingView.swift in Sources */,
 				7158DD1A249A2D8100CD7142 /* QRCodeReaderView.swift in Sources */,
+				71F8F322249D0F490014886B /* AlertView.swift in Sources */,
 				CEF256CE245722AE00673749 /* MainView.swift in Sources */,
 				71090E9D2497C40C007F969E /* FiltersView.swift in Sources */,
 			);

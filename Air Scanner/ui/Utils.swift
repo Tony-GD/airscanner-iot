@@ -40,6 +40,8 @@ extension Color {
     static let mainButtonPressed = Color("MainButtonPressed")
     static let darkText = Color("DarkText")
     static let inputBackground = Color("InputBackground")
+    static let successAlert = Color("SuccessAlert")
+    static let errorAlert = Color("ErrorAlert")
 }
 
 
@@ -124,29 +126,57 @@ struct MainTextFieldStyle: TextFieldStyle {
     }
 }
 
-struct InfoAlertState {
-    enum AlertState {
-        case dismissed
-        case presented(String)
-        
-        var message: String? {
-            switch self {
-            case .dismissed:
-                return nil
-            case .presented(let message):
-                return message
-            }
+enum AlertState {
+    case dismissed
+    case success(String)
+    case error(String)
+    
+    var message: String? {
+        switch self {
+        case .dismissed:
+            return nil
+        case .success(let message):
+            return message
+        case .error(let message):
+            return message
         }
     }
-    var state: AlertState = .dismissed
-    var presened: Bool {
-        get {
-            if case .presented = state { return true }
-            return false
+    
+    var title: String? {
+        switch self {
+        case .dismissed:
+            return nil
+        case .success:
+            return "Success!"
+        case .error:
+            return "Oops!"
         }
-        
-        set {
-            if !newValue { state = .dismissed }
+    }
+    
+    var color: Color {
+        switch self {
+        case .dismissed:
+            return .clear
+        case .success:
+            return .successAlert
+        case .error:
+            return .errorAlert
         }
+    }
+    
+    var image: Image {
+        switch self {
+        case .dismissed:
+            return Image(systemName: "")
+        case .success:
+            return Image(systemName: "checkmark.circle.fill")
+        case .error:
+            return Image(systemName: "multiply.circle.fill")
+        }
+    }
+    
+    var isPresented: Bool {
+        if case .dismissed = self { return false }
+        return true
     }
 }

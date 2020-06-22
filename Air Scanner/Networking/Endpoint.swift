@@ -26,7 +26,7 @@ extension EndpointError: LocalizedError {
         case .noInternetConnection:
             return "Internet connection has been lost."
         default:
-            return "Something went wrong. Please try again later"
+            return "Something weird happend. Keep calm and try again."
         }
     }
 }

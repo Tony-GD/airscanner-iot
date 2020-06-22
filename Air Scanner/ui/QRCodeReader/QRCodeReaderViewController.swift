@@ -17,34 +17,25 @@ class QRCodeReaderViewController: UIViewController {
     private var previewLayer: AVCaptureVideoPreviewLayer!
     
     private let testPublicKey = """
------BEGIN PRIVATE KEY-----
-MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDGmi/JHuEnT7Ma
-vgFDVxARTblGI7ie7DU9BF1rVWj/HlcIFqsqUG+33bwUXhqXWZnGm6Y1SoFG9SU4
-enWFonWIHGsBW1MZ5DSi8HQOzuM2HlyPy/qaIRAfNKruULsiuuQ1HZIpSJiaco83
-X6SD4MSySt3voNT91EL9Lm4XXm4atuwNy4DNoGWnRJpFSPq55Y2Gl+DVE4gO3YmN
-xgyaNxVpCNWFomMJW+Rf+NyU3CVl0NyQsFP8nDSiF+Gwbj/DeNYh4rIcdVECjdqd
-xHODbP4VakFrX/MThWvV83oA54cHT1b3o8jk2hGUQaxtxKhkgTxcGKmFbPV26ldF
-j0DPMKfnAgMBAAECggEAZRQWXAs+Vq6mnmaz590IzXW8ZSlLDn9zvSFaloU60hVU
-AEbhSMD1iyPsVIVsjTlKHZ4cYqUP1Nhx4CPbam872FF2WJNtYREXhRJSTzMWyvV6
-8KjFW+qV9PvuPyqRg+SQv0PUnvRWzsydfXZNGd2s3n1iJVK69JEyov8dgwFJkog+
-7d2S6xo6U+ufV3pj/3opjqCkBN5RPiH1ityjsUcuZEIN++k+vwms6BvU19zIvbEk
-nAutkmL7D3f8K1doYohdzUcy5ZNa7E8C0NbHrqFRy3LAgs5/3Eid6SCdEpjsfUgu
-+KGdqWYF1jND61lV/85VRvdxXAw3A+mlj+glRZCQeQKBgQDwhmUS2KCf3by5kW0U
-5ucKaNSPedmOfvMOhimi3kdEpjDHZ55lDJnRoNBRGsLfbANzxRN8TrGHvIjv3lkF
-qyILTCRj02dqBSrzZorj1hOC0UhYcpfkOBcCusmjDDZbJvsTMyaEKh+nuu55To5i
-Y4NF3oSA6iZU3I+0uBpSWE2cuwKBgQDTYUwo3IPDnypDfKOqvjOL1jEkak4mz4Jw
-zOFiVBBr5IqgtdFgyRwWEGCafdrLS3Us1Dy3RmRUG9Xw9WIvthPo4qUjWmPloE/e
-Qpg6fylLZhz7pgOac7EycGAEGzaGJ+axvoN/ktfz6bnIcTW50Zav8IWYvBUH7Eea
-35D3idpkxQKBgFNzLYo2YrRUqG/xxtjjq/FuoaEN869+2DGH1tZNLIji6DWm+8uv
-bYbPtrcNA+OkhCYckEAmxW2EujYO/O/8ihlFV7LS3CRqmpZMU4/s7GQM3H7jc1OZ
-KlKmH+NUD1/czGvC6XAddVIqhybLXJdCU39gTrSziI0U4T8gSPGc9YCVAoGAGgQF
-nZnWVcNHLlsuwZr7OSC5l6PFzp0Hjt6IdtOl2cGdFj6KcIEQBd8qJJmMziyRVV0h
-w+TUAE4UvL1WwkyEkssiTAGZ/e8HJXHIzppL+M2uj4JVOzM2AeE20AqRYV2T1Rh/
-krn9/jUr+nGEjUQwaaMOrkenxvvbrEIL04uR54kCgYAkboAa1kn/lk0c8vEPxtjg
-Egj2ciFmnpwkm+Gu71e1XXpQFZbmQNLWmS7PzdrRJRAanuOuLaCAGHSwD5HK9ViM
-OOE3wNX+A5Ci3gkEs+lSBWo0t7ISDyogUAoAuxqyBE/nAp0HBAxSr5DWKVB4RDlL
-ri418OlO5yhxEcZg2MZHjg==
------END PRIVATE KEY-----
+-----BEGIN CERTIFICATE-----
+MIIDAzCCAeugAwIBAgIUCFTeDPAXzUUgsN9ZN7Mk/msHZO0wDQYJKoZIhvcNAQEL
+BQAwETEPMA0GA1UEAwwGdW51c2VkMB4XDTIwMDYxNzExMzI0N1oXDTIwMDcxNzEx
+MzI0N1owETEPMA0GA1UEAwwGdW51c2VkMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAxpovyR7hJ0+zGr4BQ1cQEU25RiO4nuw1PQRda1Vo/x5XCBarKlBv
+t928FF4al1mZxpumNUqBRvUlOHp1haJ1iBxrAVtTGeQ0ovB0Ds7jNh5cj8v6miEQ
+HzSq7lC7IrrkNR2SKUiYmnKPN1+kg+DEskrd76DU/dRC/S5uF15uGrbsDcuAzaBl
+p0SaRUj6ueWNhpfg1ROIDt2JjcYMmjcVaQjVhaJjCVvkX/jclNwlZdDckLBT/Jw0
+ohfhsG4/w3jWIeKyHHVRAo3ancRzg2z+FWpBa1/zE4Vr1fN6AOeHB09W96PI5NoR
+lEGsbcSoZIE8XBiphWz1dupXRY9AzzCn5wIDAQABo1MwUTAdBgNVHQ4EFgQU+AtF
+lVqFXq8ngh2E/bjrK+DEINIwHwYDVR0jBBgwFoAU+AtFlVqFXq8ngh2E/bjrK+DE
+INIwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAbnVSJ0uSWM3r
+utX7jpd+VFZBABSidA15Hydn6bJ/4kDFehu958OEJKTBfz9Hph5+2EGO1WccA2Qs
+WkXrtLRQ/NeqYucT5Dqx0CdTK+rNXD0Y1qYIKufr7JhPj2MtXuxsord10Xz7PppA
+F90pX94u5/l45r1bT5H8UGGEqXP9xryxwQj1CHYXwB5MtRKVyCfJqF1ElYgYzS/Q
+p/TArR55fdQVoOwiErbqbGhrx9CdVqc4M/LM7sAIpswO74eHECaY9coPDkUVu0kC
+SwPAk5nQ7J93oKXc7OTJKDJXxgo/20PTan8vPYDV01mIFRYhdrbWMR46sqCPtxJi
+8vwVvdnjaQ==
+-----END CERTIFICATE-----
 """
     
     private var videoOrientation: AVCaptureVideoOrientation? {
@@ -138,7 +129,7 @@ ri418OlO5yhxEcZg2MZHjg==
         let label = UILabel(frame: .zero)
         label.numberOfLines = 0
         label.textColor = .white
-        label.font = .systemFont(ofSize: 83)
+        label.font = .systemFont(ofSize: 8)
         label.backgroundColor = .clear
         label.textAlignment = .center
         label.text = testPublicKey

@@ -198,7 +198,7 @@ struct DevicesView: View {
     @State private var objectType: Int = 0
     @State private var gatewayState = GatewayState()
     @State private var deviceState = DeviceState()
-    @State private var alertState = InfoAlertState()
+    @State private var alertState: AlertState = .dismissed
     @ObservedObject var gatewayEndpoint = Endpoint<AddItemResponse>(baseURL: API.baseURL, path: "gateway", method: .post)
     @ObservedObject var deviceEndpoint = Endpoint<AddItemResponse>(baseURL: API.baseURL, path: "device", method: .post)
     
@@ -260,28 +260,36 @@ struct DevicesView: View {
             }
             .navigationBarTitle("Add new")
         }
+        .overlay (
+            Group {
+                if alertState.isPresented {
+                    AlertView(state: alertState)
+                        .transition(.opacity)
+                }
+            }
+        )
         .onReceive(gatewayEndpoint.$result) { result in
             self.isLoading = false
             switch result {
             case .success?:
-                self.alertState.state = .presented("\(self.gatewayState.name) gateway successfully added")
+                self.showAlertWithState(.success("The gateway was added. Now you can track it."))
                 self.gatewayState.clear()
             case .failure(let error)?:
-                self.alertState.state = .presented(error.localizedDescription)
+                self.showAlertWithState(.error(error.localizedDescription))
             case nil:
-                self.alertState.state = .dismissed
+                self.alertState = .dismissed
             }
         }
         .onReceive(deviceEndpoint.$result) { result in
             self.isLoading = false
             switch result {
             case .success?:
-                self.alertState.state = .presented("\(self.deviceState.name) device successfully added")
+                self.showAlertWithState(.success("The device was added. Now you can track it."))
                 self.deviceState.clear()
             case .failure(let error)?:
-                self.alertState.state = .presented(error.localizedDescription)
+                self.showAlertWithState(.error(error.localizedDescription))
             case nil:
-                self.alertState.state = .dismissed
+                self.alertState = .dismissed
             }
         }
         .overlay(
@@ -293,8 +301,16 @@ struct DevicesView: View {
                 }
             }
         )
-        .alert(isPresented: $alertState.presened) {
-            Alert(title: Text(alertState.state.message ?? ""))
+    }
+    
+    private func showAlertWithState(_ state: AlertState) {
+        withAnimation {
+            alertState = state
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            withAnimation{
+                self.alertState = .dismissed
+            }
         }
     }
     
