@@ -17,7 +17,6 @@ struct MapView: View {
         ZStack(alignment: .topLeading) {
             WhirlyGlobeMapView(devices: storage.filteredDevices,
                                userLocation: locationManager.location,
-                               filter: storage.filter,
                                moveToUserLocation: $moveToUserLocation)
                 .edgesIgnoringSafeArea(.top)
                 .zIndex(0)

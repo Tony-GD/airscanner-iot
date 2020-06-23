@@ -17,7 +17,6 @@ struct WhirlyGlobeMapView : UIViewControllerRepresentable {
     
     var devices:[Device]
     var userLocation: Location?
-    var filter: PublicMetric?
     @Binding var moveToUserLocation: Bool
     
     func makeUIViewController(context: Context) -> MapViewController {
@@ -33,7 +32,7 @@ struct WhirlyGlobeMapView : UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController:  MapViewController, context: Context) {
-        uiViewController.configure(with: devices, filter: filter)
+        uiViewController.configure(with: devices)
         uiViewController.userLocation = userLocation
         if moveToUserLocation {
             uiViewController.moveToUserLocation()
